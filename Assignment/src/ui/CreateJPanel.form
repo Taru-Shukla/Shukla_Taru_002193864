@@ -40,115 +40,115 @@
                           <Component id="lblImage" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="lblUniqueID" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="51" pref="51" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="51" pref="51" max="-2" attributes="0"/>
+                              <Component id="txtIPAddress" min="-2" pref="277" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelIPAdd" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtLinkedIn" min="-2" pref="277" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelLinkedIn" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtDeviceId" min="-2" pref="277" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelDID" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtVehicleId" min="-2" pref="277" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelVID" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtLicenseNum" min="-2" pref="277" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelLicenseNumber" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtBankNum" min="-2" pref="277" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelBank" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtHealthNum" min="-2" pref="277" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelHBN" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtMedic" min="-2" pref="277" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelMRN" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtName" pref="273" max="32767" attributes="0"/>
+                                  <Component id="txtGeoData" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabelName" min="-2" pref="156" max="-2" attributes="0"/>
+                                  <Component id="jLabelGeoData" min="-2" pref="165" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="txtDOB" min="-2" pref="275" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabelValDOB" min="-2" pref="192" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="txtBioId" alignment="0" min="-2" pref="277" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="txtUniqueID" min="-2" pref="277" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabelUID" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtIPAddress" min="-2" pref="277" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabelIPAdd" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtLinkedIn" min="-2" pref="277" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabelLinkedIn" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtDeviceId" min="-2" pref="277" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabelDID" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtVehicleId" min="-2" pref="277" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabelVID" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtLicenseNum" min="-2" pref="277" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabelLicenseNumber" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtBankNum" min="-2" pref="277" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabelBank" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtHealthNum" min="-2" pref="277" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabelHBN" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtMedic" min="-2" pref="277" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabelMRN" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtSSN" min="-2" pref="277" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabelSSN" pref="167" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="txtEmail" alignment="0" pref="277" max="32767" attributes="0"/>
-                                              <Component id="txtFAX" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="txtTeleNum" alignment="0" max="32767" attributes="0"/>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jLabelValTeleNum" max="32767" attributes="0"/>
-                                              <Component id="jLabelFAX" max="32767" attributes="0"/>
-                                              <Component id="jLabelEmail" alignment="0" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="283" max="-2" attributes="0"/>
-                                      <Component id="jLabel1" min="-2" pref="171" max="-2" attributes="0"/>
+                                      <Component id="jLabelBioID" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jButtonBio" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLabelFullFace" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="txtUniqueID" min="-2" pref="277" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabelUID" min="-2" pref="153" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="txtSSN" alignment="0" min="-2" pref="277" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="txtEmail" alignment="0" pref="275" max="32767" attributes="0"/>
+                                          <Component id="txtTeleNum" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtFAX" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabelSSN" min="-2" pref="183" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="jLabelValTeleNum" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jLabelFAX" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="jLabelEmail" min="-2" pref="167" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtName" pref="273" max="32767" attributes="0"/>
-                                  <Component id="txtGeoData" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelName" min="-2" pref="156" max="-2" attributes="0"/>
-                                  <Component id="jLabelGeoData" min="-2" pref="165" max="-2" attributes="0"/>
-                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="275" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="369" max="-2" attributes="0"/>
                       <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="244" max="-2" attributes="0"/>
-                      <Component id="btnSave" min="-2" max="-2" attributes="0"/>
-                  </Group>
               </Group>
-              <EmptySpace pref="32" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="270" max="-2" attributes="0"/>
+              <Component id="btnSave" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -156,122 +156,130 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelName" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblGeoData" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtGeoData" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelGeoData" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblDOB" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtDOB" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelValDOB" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblTeleNum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtTeleNum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelValTeleNum" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblFAX" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtFAX" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelFAX" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblSSN" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="txtSSN" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jLabelSSN" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Component id="lblTitle" min="-2" pref="23" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblGeoData" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtGeoData" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelGeoData" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblDOB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtDOB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelValDOB" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblTeleNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtTeleNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelValTeleNum" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblFAX" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtFAX" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelFAX" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelEmail" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblSSN" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="txtSSN" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jLabelSSN" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="lblMedic" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtMedic" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabelMRN" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblHealthNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtHealthNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelHBN" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblBankNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtBankNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelBank" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblLicenseNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtLicenseNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelLicenseNumber" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblVehicleId" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtVehicleId" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelVID" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblDeviceId" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtDeviceId" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDID" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblLinkedIn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtLinkedIn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelLinkedIn" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblIPAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtIPAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelIPAdd" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="lblBioId" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabelBioID" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
+                  <Component id="jButtonBio" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblMedic" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="txtMedic" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabelMRN" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblHealthNum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtHealthNum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelHBN" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblBankNum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtBankNum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelBank" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblLicenseNum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtLicenseNum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelLicenseNumber" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblVehicleId" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtVehicleId" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelVID" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblDeviceId" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtDeviceId" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelDID" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblLinkedIn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtLinkedIn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelLinkedIn" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblIPAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtIPAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelIPAdd" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblBioId" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtBioId" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblImage" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="jLabelFullFace" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblUniqueID" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtUniqueID" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabelUID" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="65" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnSave" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -279,6 +287,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="lblTitle">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="14" style="1"/>
+        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Create Profile "/>
       </Properties>
@@ -459,11 +470,6 @@
         <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtIPAddressKeyReleased"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtBioId">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBioIdActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JTextField" name="txtUniqueID">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
@@ -475,13 +481,16 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnSave">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="13" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Save"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jLabelFullFace">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -489,7 +498,7 @@
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
-        <EventHandler event="inputMethodTextChanged" listener="java.awt.event.InputMethodListener" parameters="java.awt.event.InputMethodEvent" handler="jLabel1InputMethodTextChanged"/>
+        <EventHandler event="inputMethodTextChanged" listener="java.awt.event.InputMethodListener" parameters="java.awt.event.InputMethodEvent" handler="jLabelFullFaceInputMethodTextChanged"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
@@ -502,12 +511,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelValDOB">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelValTeleNum">
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabelFAX">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="99" red="0" type="rgb"/>
+          <Color blue="99" green="33" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Fax number starts with +1"/>
       </Properties>
@@ -517,32 +524,80 @@
     <Component class="javax.swing.JLabel" name="jLabelSSN">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="99" red="0" type="rgb"/>
+          <Color blue="99" green="33" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="SSN : 222-222222"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelMRN">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="33" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="6 - digit Number"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelHBN">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="33" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="11 - digit Number"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelBank">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelLicenseNumber">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="33" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="7 - digit Number"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelVID">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="33" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="17 - digit Number"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelDID">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="33" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="32 - digit Number"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelLinkedIn">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelIPAdd">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelUID">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="33" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="College ID"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelName">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelGeoData">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelBioID">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonBio">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Attach"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBioActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelValTeleNum">
     </Component>
   </SubComponents>
 </Form>

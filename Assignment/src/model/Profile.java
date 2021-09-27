@@ -26,11 +26,11 @@ public class Profile {
         this.geoData = geoData;
     }
 
-    public Integer getDoB() {
+    public String getDoB() {
         return doB;
     }
 
-    public void setDoB(Integer doB) {
+    public void setDoB(String doB) {
         this.doB = doB;
     }
 
@@ -42,11 +42,11 @@ public class Profile {
         this.teleNumber = teleNumber;
     }
 
-    public Integer getFaxNumber() {
+    public String getFaxNumber() {
         return faxNumber;
     }
 
-    public void setFaxNumber(Integer faxNumber) {
+    public void setFaxNumber(String faxNumber) {
         this.faxNumber = faxNumber;
     }
 
@@ -131,9 +131,9 @@ public class Profile {
     }
     private String name;
     private String geoData;
-    private Integer doB;
+    private String doB;
     private Integer teleNumber;
-    private Integer faxNumber;
+    private String faxNumber;
     private String emailAdd;
     private String ssn;
     private Integer medicNumber;
