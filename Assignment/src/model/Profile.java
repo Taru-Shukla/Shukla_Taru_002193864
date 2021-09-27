@@ -34,11 +34,11 @@ public class Profile {
         this.doB = doB;
     }
 
-    public Integer getTeleNumber() {
+    public Long getTeleNumber() {
         return teleNumber;
     }
 
-    public void setTeleNumber(Integer teleNumber) {
+    public void setTeleNumber(Long teleNumber) {
         this.teleNumber = teleNumber;
     }
 
@@ -82,11 +82,11 @@ public class Profile {
         this.healthPlanNumbr = healthPlanNumbr;
     }
 
-    public Integer getBankAccount() {
+    public Long getBankAccount() {
         return bankAccount;
     }
 
-    public void setBankAccount(Integer bankAccount) {
+    public void setBankAccount(Long bankAccount) {
         this.bankAccount = bankAccount;
     }
 
@@ -122,28 +122,28 @@ public class Profile {
         this.linkedIn = linkedIn;
     }
 
-    public Integer getIpAddress() {
+    public String getIpAddress() {
         return ipAddress;
     }
 
-    public void setIpAddress(Integer ipAddress) {
+    public void setIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
     }
     private String name;
     private String geoData;
     private String doB;
-    private Integer teleNumber;
+    private Long teleNumber;
     private String faxNumber;
     private String emailAdd;
     private String ssn;
     private Integer medicNumber;
     private String healthPlanNumbr;
-    private Integer bankAccount;
+    private Long bankAccount;
     private Integer licenseNumber;
     private String vehicleIdentifier;
     private String deviceIdentifier;
     private String linkedIn;
-    private Integer ipAddress;
+    private String ipAddress;
     private String bioId;
     private String fullFace;
     private Integer uniqueId;

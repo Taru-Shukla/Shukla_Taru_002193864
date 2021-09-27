@@ -115,7 +115,6 @@ public class DisplayJPanel extends javax.swing.JPanel {
 
         lblUniqueID.setText("Unique Identifying Number");
 
-        txtName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
@@ -164,14 +163,11 @@ public class DisplayJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtUniqueID.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtUniqueID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUniqueIDActionPerformed(evt);
             }
         });
-
-        jLabelBio.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -245,9 +241,11 @@ public class DisplayJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(lblTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 474, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelBio, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblBioId))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblBioId)
+                        .addGap(29, 29, 29)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
@@ -419,7 +417,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
         txtVehicleId.setText(profile.getVehicleIdentifier());
         txtDeviceId.setText(profile.getDeviceIdentifier());
         txtLinkedIn.setText(profile.getLinkedIn());
-        txtIPAddress.setText(String.valueOf(profile.getIpAddress()));
+        txtIPAddress.setText(profile.getIpAddress());
         String path1 = profile.getBioId();
         ImageIcon MyImage = new ImageIcon(path1);
         Image image = MyImage.getImage().getScaledInstance(jLabelBio.getWidth()+100, jLabelBio.getHeight()+100, Image.SCALE_SMOOTH);
