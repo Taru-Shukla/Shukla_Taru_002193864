@@ -88,10 +88,17 @@
                                   <Component id="txtName" pref="273" max="32767" attributes="0"/>
                                   <Component id="txtGeoData" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelName" min="-2" pref="156" max="-2" attributes="0"/>
-                                  <Component id="jLabelGeoData" min="-2" pref="165" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jLabelName" min="-2" pref="156" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabelGeoData" min="-2" pref="165" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
@@ -163,7 +170,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblGeoData" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtGeoData" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelGeoData" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelGeoData" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
