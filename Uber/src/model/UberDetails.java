@@ -17,6 +17,15 @@ public class UberDetails {
      private String modelNumber;
      private String city;
      private String maintenanceCertificate;
+     private String fleetCatalogEntryDate;
+
+    public String getFleetCatalogEntryDate() {
+        return fleetCatalogEntryDate;
+    }
+
+    public void setFleetCatalogEntryDate(String fleetCatalogEntryDate) {
+        this.fleetCatalogEntryDate = fleetCatalogEntryDate;
+    }
      private String fleetCatalogUpdateDate;
      private Long vehicleInsurance;
      private String uberType;
@@ -99,5 +108,9 @@ public class UberDetails {
 
     public void setUberType(String uberType) {
         this.uberType = uberType;
+    }
+    @Override
+    public String toString(){
+        return carbrand;
     }
 }

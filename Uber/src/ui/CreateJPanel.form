@@ -2,7 +2,7 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.ButtonGroup" name="buttonGroup">
+    <Component class="javax.swing.ButtonGroup" name="buttonGroupchckBox">
     </Component>
   </NonVisualComponents>
   <AuxValues>
@@ -21,80 +21,72 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblTitle" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="lblTitle" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lblManufactureDate" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblBrandName" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblSerialNumber" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblModelNumber" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblMaintenanceCertificate" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblSeatCount" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblCity" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblVehicleInsurance" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblRideOption" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="txtModelNumber" alignment="0" pref="217" max="32767" attributes="0"/>
-                                      <Component id="txtSerialNumber" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtManufactureDate" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtBrandName" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtCity" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="comboRideOption" alignment="0" pref="217" max="32767" attributes="0"/>
-                                      <Component id="txtVehicleInsurance" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="chcSeatCount" min="-2" pref="118" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
+                      <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lblManufactureDate" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblBrandName" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblSerialNumber" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblModelNumber" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblMaintenanceCertificate" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblSeatCount" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCity" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblVehicleInsurance" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblRideOption" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txtVehicleInsurance" pref="217" max="32767" attributes="0"/>
+                          <Component id="comboRideOption" alignment="0" pref="217" max="32767" attributes="0"/>
+                          <Component id="txtCity" alignment="0" pref="217" max="32767" attributes="0"/>
+                          <Component id="txtModelNumber" alignment="0" pref="217" max="32767" attributes="0"/>
+                          <Component id="txtSerialNumber" alignment="0" pref="217" max="32767" attributes="0"/>
+                          <Component id="chcSeatCount" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                          <Component id="txtManufactureDate" alignment="0" pref="217" max="32767" attributes="0"/>
+                          <Component id="txtBrandName" pref="217" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="313" max="-2" attributes="0"/>
-                              <Component id="btnsave" min="-2" max="-2" attributes="0"/>
+                              <Component id="chckYes" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="chckNo" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="246" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="297" max="-2" attributes="0"/>
+                      <Component id="btnsave" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace pref="369" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
               <Component id="lblTitle" min="-2" pref="28" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblBrandName" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtBrandName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblManufactureDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtManufactureDate" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="lblManufactureDate" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtManufactureDate" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="lblSeatCount" min="-2" max="-2" attributes="0"/>
                   <Component id="chcSeatCount" min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblSerialNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtSerialNumber" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -110,24 +102,29 @@
                   <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblMaintenanceCertificate" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblMaintenanceCertificate" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="chckYes" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chckNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtVehicleInsurance" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblVehicleInsurance" alignment="3" min="-2" pref="10" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblRideOption" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboRideOption" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblVehicleInsurance" alignment="3" min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="txtVehicleInsurance" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblRideOption" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="comboRideOption" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <EmptySpace pref="53" max="32767" attributes="0"/>
               <Component id="btnsave" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="98" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -235,35 +232,21 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnsaveActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+    <Component class="javax.swing.JCheckBox" name="chckYes">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup"/>
+          <ComponentRef name="buttonGroupchckBox"/>
         </Property>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="&quot;Yes&quot;" type="code"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="Yes"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
-      </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="if(jRadioButton1.isSelected()){&#xa;          System.out.println(&quot;Yes&quot;);&#xa;        }"/>
-        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JRadioButton()"/>
-      </AuxValues>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+    <Component class="javax.swing.JCheckBox" name="chckNo">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup"/>
+          <ComponentRef name="buttonGroupchckBox"/>
         </Property>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="&quot;No&quot;" type="code"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="if(jRadioButton2.isSelected()){&#xa;           System.out.println(&quot;No&quot;);&#xa;        }"/>
-      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

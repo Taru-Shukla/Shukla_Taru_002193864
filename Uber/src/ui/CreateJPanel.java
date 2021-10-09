@@ -6,11 +6,18 @@
 package ui;
 
 import java.awt.Choice;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import model.UberCatalog;
 import model.UberDetails;
@@ -41,7 +48,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup = new javax.swing.ButtonGroup();
+        buttonGroupchckBox = new javax.swing.ButtonGroup();
         lblTitle = new javax.swing.JLabel();
         lblBrandName = new javax.swing.JLabel();
         lblManufactureDate = new javax.swing.JLabel();
@@ -61,8 +68,8 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtVehicleInsurance = new javax.swing.JTextField();
         comboRideOption = new javax.swing.JComboBox<>();
         btnsave = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        chckYes = new javax.swing.JCheckBox();
+        chckNo = new javax.swing.JCheckBox();
 
         lblTitle.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -118,80 +125,71 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        buttonGroup.add(jRadioButton1);
-        jRadioButton1.setText("Yes");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
+        buttonGroupchckBox.add(chckYes);
+        chckYes.setText("Yes");
 
-        buttonGroup.add(jRadioButton2);
-        jRadioButton2.setText("No");
+        buttonGroupchckBox.add(chckNo);
+        chckNo.setText("No");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(117, 117, 117))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(169, 169, 169)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblManufactureDate)
+                            .addComponent(lblBrandName)
+                            .addComponent(lblSerialNumber)
+                            .addComponent(lblModelNumber)
+                            .addComponent(lblMaintenanceCertificate)
+                            .addComponent(lblSeatCount)
+                            .addComponent(lblCity)
+                            .addComponent(lblVehicleInsurance)
+                            .addComponent(lblRideOption))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtVehicleInsurance, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                            .addComponent(comboRideOption, 0, 217, Short.MAX_VALUE)
+                            .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                            .addComponent(txtModelNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                            .addComponent(txtSerialNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                            .addComponent(chcSeatCount, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtManufactureDate, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                            .addComponent(txtBrandName, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(chckYes)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(chckNo))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(169, 169, 169)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblManufactureDate)
-                                    .addComponent(lblBrandName)
-                                    .addComponent(lblSerialNumber)
-                                    .addComponent(lblModelNumber)
-                                    .addComponent(lblMaintenanceCertificate)
-                                    .addComponent(lblSeatCount)
-                                    .addComponent(lblCity)
-                                    .addComponent(lblVehicleInsurance)
-                                    .addComponent(lblRideOption))
-                                .addGap(34, 34, 34)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(txtModelNumber, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                                        .addComponent(txtSerialNumber, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtManufactureDate, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtBrandName, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtCity, javax.swing.GroupLayout.Alignment.LEADING))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(comboRideOption, javax.swing.GroupLayout.Alignment.LEADING, 0, 217, Short.MAX_VALUE)
-                                        .addComponent(txtVehicleInsurance, javax.swing.GroupLayout.Alignment.LEADING))
-                                    .addComponent(chcSeatCount, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jRadioButton1)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton2))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(313, 313, 313)
-                                .addComponent(btnsave)))
-                        .addGap(0, 246, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(297, 297, 297)
+                        .addComponent(btnsave)))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(72, 72, 72)
                 .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(122, 122, 122)
+                .addGap(83, 83, 83)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblBrandName)
                     .addComponent(txtBrandName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblManufactureDate)
                     .addComponent(txtManufactureDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblSeatCount)
                     .addComponent(chcSeatCount, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblSerialNumber)
                     .addComponent(txtSerialNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -204,21 +202,24 @@ public class CreateJPanel extends javax.swing.JPanel {
                     .addComponent(lblCity)
                     .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblMaintenanceCertificate)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblRideOption)
-                    .addComponent(comboRideOption, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(chckYes)
+                            .addComponent(chckNo))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblRideOption)
+                            .addComponent(comboRideOption, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(btnsave)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addGap(68, 68, 68))
         );
 
         chcSeatCount.add("2");
@@ -229,47 +230,30 @@ public class CreateJPanel extends javax.swing.JPanel {
         comboRideOption.addItem("Uber XL");
         comboRideOption.addItem("Uber Comfort");
         comboRideOption.addItem("Uber black");
-        if(jRadioButton1.isSelected()){
-            System.out.println("Yes");
-        }
-        if(jRadioButton2.isSelected()){
-            System.out.println("No");
-        }
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
         // TODO add your handling code here:
+        String maintenanceCertificate=null;
         String carbrand=txtBrandName.getText();
         String manufacture=txtManufactureDate.getText();
-        Integer seatCount =Integer.parseInt(chcSeatCount.getSelectedItem().toString());
+        Integer seatCount =Integer.parseInt(chcSeatCount.getSelectedItem());
         Long serialNumber=Long.parseLong(txtSerialNumber.getText());
         String modelNumber= txtModelNumber.getText();
         String city= txtCity.getText();
-//        
-//        radioMaintenance1 = new JRadioButton("Yes");
-//        radioMaintenance1.setActionCommand("Yes");
-//        radioMaintenance2 = new JRadioButton("No");
-//        radioMaintenance2.setActionCommand("No");
-//        
-//        group = new ButtonGroup();
-//        group.add(radioMaintenance1);
-//        group.add(radioMaintenance2);
-//        
-//        this.add(radioMaintenance1);
-//        this.add(radioMaintenance2);
-//        this.setVisible(true);
-//
-//        
-        String maintenanceCertificate = buttonGroup.getSelection().getActionCommand();
-//        System.out.println(group.getSelection().toString());
-//        if(buttonGroup1.isSelected()){
-//            maintenanceCertificate="Yes";
-//        }else{
-//                    maintenanceCertificate="No";
-//    }
+        if(chckYes.isSelected()){
+            maintenanceCertificate= chckYes.getText();
+        }else if(chckNo.isSelected()){
+           maintenanceCertificate= chckNo.getText();
+
+        }
         Long vehicleInsurance=Long.parseLong(txtVehicleInsurance.getText());
         String uberType=comboRideOption.getSelectedItem().toString();
-        
+         LocalDateTime now = LocalDateTime.now();  
+//        txtFleetCreationDate.set
+//         Date fleetCreationDate;
+     String fleetCreationDate = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
+       // String fleetCreationDate= String.valueOf(now.toLocalTime().minusSeconds(100));
         UberDetails ud = catalog.addNewDetails();
         ud.setCarbrand(carbrand);
         ud.setManufacture(manufacture);
@@ -280,7 +264,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         ud.setMaintenanceCertificate(maintenanceCertificate);
         ud.setVehicleInsurance(vehicleInsurance);
         ud.setUberType(uberType);
-        
+        ud.setFleetCatalogEntryDate(fleetCreationDate);
         JOptionPane.showMessageDialog(this, "Car details added.");
         txtBrandName.setText("");
         txtManufactureDate.setText("");
@@ -308,18 +292,14 @@ public class CreateJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSerialNumberActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnsave;
-    private javax.swing.ButtonGroup buttonGroup;
+    private javax.swing.ButtonGroup buttonGroupchckBox;
     private java.awt.Choice chcSeatCount;
+    private javax.swing.JCheckBox chckNo;
+    private javax.swing.JCheckBox chckYes;
     private javax.swing.JComboBox<String> comboRideOption;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JLabel lblBrandName;
     private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblMaintenanceCertificate;
@@ -338,16 +318,6 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtVehicleInsurance;
     // End of variables declaration//GEN-END:variables
 
-    private void maintainCertificate() {
-//        radioMaintenance1 = new JRadioButton("Yes");
-//        radioMaintenance1.setActionCommand("Yes");
-//        radioMaintenance2 = new JRadioButton("No");
-//        radioMaintenance2.setActionCommand("No");
-        
-//        group = new ButtonGroup();
-//        group.add(radioMaintenance1);
-//        group.add(radioMaintenance2);
-    }
 
 
 }

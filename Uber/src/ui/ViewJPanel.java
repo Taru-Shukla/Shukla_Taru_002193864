@@ -5,8 +5,12 @@
  */
 package ui;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import javax.swing.JOptionPane;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 import model.UberCatalog;
 import model.UberDetails;
 
@@ -20,6 +24,7 @@ public class ViewJPanel extends javax.swing.JPanel {
      * Creates new form ViewJPanel
      */
     UberCatalog catalog;
+     DefaultTableModel model;
     public ViewJPanel(UberCatalog catalog) {
         initComponents();
         this.catalog= catalog;
@@ -36,11 +41,10 @@ public class ViewJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup = new javax.swing.ButtonGroup();
+        buttonGroupchckBox = new javax.swing.ButtonGroup();
         lblTitle = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblUberDetails = new javax.swing.JTable();
-        btnView = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         lblBrandName = new javax.swing.JLabel();
         lblManufactureDate = new javax.swing.JLabel();
@@ -59,8 +63,10 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtCity = new javax.swing.JTextField();
         txtVehicleInsurance = new javax.swing.JTextField();
         comboRideOption = new javax.swing.JComboBox<>();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        chckYes = new javax.swing.JCheckBox();
+        chckNo = new javax.swing.JCheckBox();
+        lblSearch = new javax.swing.JLabel();
+        txtSearch = new javax.swing.JTextField();
 
         lblTitle.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -68,32 +74,18 @@ public class ViewJPanel extends javax.swing.JPanel {
 
         tblUberDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+
             },
             new String [] {
-                "Brand", "Manufactured Date", "Seat Count", "Serial Number", "Model Number", "City", "Maintenance Certificate", "Vehicle Insurance", "Uber Type"
+                "Brand", "Manufactured Date", "Seat Count", "Serial Number", "Model Number", "City", "Maintenance Certificate", "Vehicle Insurance", "Uber Type", "Entry Date", "Updation Date"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+        ));
+        tblUberDetails.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblUberDetailsMouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(tblUberDetails);
-
-        btnView.setText("View");
-        btnView.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
-            }
-        });
 
         btnUpdate.setText("Update");
         btnUpdate.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -150,108 +142,130 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
-        jRadioButton1.setText("Yes");
+        buttonGroupchckBox.add(chckYes);
+        chckYes.setText("Yes");
 
-        jRadioButton2.setText("No");
+        buttonGroupchckBox.add(chckNo);
+        chckNo.setText("No");
+
+        lblSearch.setText("Search");
+
+        txtSearch.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtSearchKeyReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(141, 141, 141)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblManufactureDate)
-                    .addComponent(lblBrandName)
-                    .addComponent(lblSerialNumber)
-                    .addComponent(lblModelNumber)
-                    .addComponent(lblMaintenanceCertificate)
-                    .addComponent(lblSeatCount)
-                    .addComponent(lblCity)
-                    .addComponent(lblVehicleInsurance)
-                    .addComponent(lblRideOption))
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtModelNumber, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtSerialNumber, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtManufactureDate, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtBrandName, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtCity, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(comboRideOption, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtVehicleInsurance, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(chcSeatCount, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2)))
-                .addContainerGap(256, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(209, 209, 209)
-                        .addComponent(btnView)
-                        .addGap(94, 94, 94)
-                        .addComponent(btnUpdate)
+                        .addGap(145, 145, 145)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblMaintenanceCertificate)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblManufactureDate)
+                                    .addComponent(lblBrandName)
+                                    .addComponent(lblSerialNumber)
+                                    .addComponent(lblSeatCount)
+                                    .addComponent(lblVehicleInsurance)
+                                    .addComponent(lblRideOption)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblCity)
+                                        .addGap(11, 11, 11)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(31, 31, 31)
+                                    .addComponent(lblModelNumber))))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtSerialNumber, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
+                                .addComponent(txtBrandName, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtManufactureDate, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtModelNumber, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(comboRideOption, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtVehicleInsurance, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(chcSeatCount, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(chckYes)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(chckNo)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jScrollPane1)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblSearch)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                                .addComponent(btnUpdate)
+                                .addGap(147, 147, 147))
+                            .addComponent(jScrollPane1))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(41, 41, 41)
                 .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnView)
-                    .addComponent(btnUpdate))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnUpdate)
+                    .addComponent(lblSearch)
+                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblBrandName)
                     .addComponent(txtBrandName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblManufactureDate)
                     .addComponent(txtManufactureDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblSeatCount)
                     .addComponent(chcSeatCount, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblSerialNumber)
-                    .addComponent(txtSerialNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblModelNumber)
-                    .addComponent(txtModelNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtSerialNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtModelNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblSerialNumber)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblModelNumber)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblCity)
                     .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblMaintenanceCertificate)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(chckYes)
+                        .addComponent(chckNo)))
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
+                .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblRideOption)
                     .addComponent(comboRideOption, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         chcSeatCount.add("2");
@@ -263,10 +277,6 @@ public class ViewJPanel extends javax.swing.JPanel {
         comboRideOption.addItem("Uber Comfort");
         comboRideOption.addItem("Uber black");
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnViewActionPerformed
 
     private void txtBrandNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBrandNameActionPerformed
         // TODO add your handling code here:
@@ -294,30 +304,42 @@ public class ViewJPanel extends javax.swing.JPanel {
         if(selectedRowIndex>=0){
             model.setValueAt(txtBrandName.getText(),selectedRowIndex,0);
             model.setValueAt(txtManufactureDate.getText(),selectedRowIndex,1);
-            model.setValueAt(chcSeatCount,selectedRowIndex,2);
+            model.setValueAt(chcSeatCount.getSelectedItem(),selectedRowIndex,2);
             model.setValueAt(txtSerialNumber.getText(),selectedRowIndex,3);
             model.setValueAt(txtModelNumber.getText(),selectedRowIndex,4);
             model.setValueAt(txtCity.getText(),selectedRowIndex,5);
-            model.setValueAt(buttonGroup.getSelection().toString(),selectedRowIndex,6);
-            model.setValueAt(txtVehicleInsurance.getText(),selectedRowIndex,7);
-            model.setValueAt(comboRideOption,selectedRowIndex,8);
+            if(chckYes.isSelected()){
+                model.setValueAt(chckYes.getText(), selectedRowIndex,6);
+        }else if(chckNo.isSelected()){
+                model.setValueAt(chckNo.getText(), selectedRowIndex,6);
 
-           
-        }else{
+        }
+            model.setValueAt(txtVehicleInsurance.getText(),selectedRowIndex,7);
+            model.setValueAt(comboRideOption.getSelectedItem().toString(),selectedRowIndex,8);
+            String fleetUpdationDate = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
+
+            model.setValueAt(fleetUpdationDate, selectedRowIndex, 10);
+        }else
+        {
                         JOptionPane.showMessageDialog(this, "Please select a row to update!");
 
         }
-        
-                UberDetails selectedDetails = (UberDetails) model.getValueAt(selectedRowIndex, 0);
-                catalog.updateDetails(selectedDetails);
-                JOptionPane.showMessageDialog(this, "Car details updated!");
-        populateTable();
+        txtBrandName.setText("");
+        txtManufactureDate.setText("");
+        txtSerialNumber.setText("");
+        txtModelNumber.setText("");
+        txtCity.setText("");
+        txtVehicleInsurance.setText("");
 
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void btnUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdateMouseClicked
+        // TODO add your handling code here:    
+    }//GEN-LAST:event_btnUpdateMouseClicked
+
+    private void tblUberDetailsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblUberDetailsMouseClicked
         // TODO add your handling code here:
-        int selectedRow = tblUberDetails.getSelectedRow();
+         int selectedRow = tblUberDetails.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel)tblUberDetails.getModel();
         txtBrandName.setText(model.getValueAt(selectedRow,0).toString());
         txtManufactureDate.setText(model.getValueAt(selectedRow,1).toString());
@@ -325,23 +347,30 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtSerialNumber.setText(model.getValueAt(selectedRow,3).toString());
         txtModelNumber.setText(model.getValueAt(selectedRow,4).toString());
         txtCity.setText(model.getValueAt(selectedRow,5).toString());
-        buttonGroup.setSelected((model.getValueAt(selectedRow,6).toString()), true);
-       // maintenanceCertificate(model.getValueAt(selectedRow,6));
+         if(chckYes.isSelected()){
+             chckYes.setText(model.getValueAt(selectedRow,6).toString());
+        }else if(chckNo.isSelected()){
+                                  chckNo.setText(model.getValueAt(selectedRow,6).toString());
+        }
         txtVehicleInsurance.setText(model.getValueAt(selectedRow,7).toString());
         comboRideOption.setSelectedItem(model.getValueAt(selectedRow,8).toString());
         
+    }//GEN-LAST:event_tblUberDetailsMouseClicked
 
-    }//GEN-LAST:event_btnUpdateMouseClicked
+    private void txtSearchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSearchKeyReleased
+        // TODO add your handling code here:
+        String query = txtSearch.getText().toLowerCase();
+       filter(query);
+    }//GEN-LAST:event_txtSearchKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnUpdate;
-    private javax.swing.JButton btnView;
-    private javax.swing.ButtonGroup buttonGroup;
+    private javax.swing.ButtonGroup buttonGroupchckBox;
     private java.awt.Choice chcSeatCount;
+    private javax.swing.JCheckBox chckNo;
+    private javax.swing.JCheckBox chckYes;
     private javax.swing.JComboBox<String> comboRideOption;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblBrandName;
     private javax.swing.JLabel lblCity;
@@ -349,6 +378,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblManufactureDate;
     private javax.swing.JLabel lblModelNumber;
     private javax.swing.JLabel lblRideOption;
+    private javax.swing.JLabel lblSearch;
     private javax.swing.JLabel lblSeatCount;
     private javax.swing.JLabel lblSerialNumber;
     private javax.swing.JLabel lblTitle;
@@ -358,18 +388,19 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtManufactureDate;
     private javax.swing.JTextField txtModelNumber;
+    private javax.swing.JTextField txtSearch;
     private javax.swing.JTextField txtSerialNumber;
     private javax.swing.JTextField txtVehicleInsurance;
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {
-        DefaultTableModel model = (DefaultTableModel)tblUberDetails.getModel();
+         model = (DefaultTableModel)tblUberDetails.getModel();
         model.setRowCount(0);
         
         for(UberDetails uds: catalog.getCatalog()){
             
-            Object[] row = new Object[9];
-            row[0]=uds.getCarbrand();
+            Object[] row = new Object[11];
+            row[0]=uds;
             row[1]=uds.getManufacture();
             row[2]=uds.getSeatCount();
             row[3]=uds.getSerialNumber();
@@ -378,10 +409,17 @@ public class ViewJPanel extends javax.swing.JPanel {
             row[6]=uds.getMaintenanceCertificate();
             row[7]=uds.getVehicleInsurance();
             row[8]=uds.getUberType();
+            row[9]=uds.getFleetCatalogEntryDate();
+            row[10]=uds.getFleetCatalogUpdateDate();
             
             model.addRow(row);
 
         }
+    }
+    private void filter(String query){
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(model);
+        tblUberDetails.setRowSorter(tr);
+        tr.setRowFilter(RowFilter.regexFilter(query));
     }
 
 }
