@@ -18,6 +18,9 @@ public class UberDetails {
      private String city;
      private String maintenanceCertificate;
      private String fleetCatalogEntryDate;
+      private String fleetCatalogUpdateDate;
+     private Long vehicleInsurance;
+     private String uberType;
 
     public String getFleetCatalogEntryDate() {
         return fleetCatalogEntryDate;
@@ -26,9 +29,7 @@ public class UberDetails {
     public void setFleetCatalogEntryDate(String fleetCatalogEntryDate) {
         this.fleetCatalogEntryDate = fleetCatalogEntryDate;
     }
-     private String fleetCatalogUpdateDate;
-     private Long vehicleInsurance;
-     private String uberType;
+    
 
     public String getCarbrand() {
         return carbrand;

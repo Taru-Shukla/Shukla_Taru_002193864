@@ -62,7 +62,7 @@
                       <Component id="btnsave" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="369" max="32767" attributes="0"/>
+              <EmptySpace pref="398" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -101,26 +101,21 @@
                   <Component id="lblCity" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="chckYes" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chckNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblMaintenanceCertificate" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtVehicleInsurance" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblVehicleInsurance" alignment="3" min="-2" pref="10" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblMaintenanceCertificate" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="chckYes" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="chckNo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtVehicleInsurance" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblVehicleInsurance" alignment="3" min="-2" pref="10" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblRideOption" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="comboRideOption" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblRideOption" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="comboRideOption" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="53" max="32767" attributes="0"/>
               <Component id="btnsave" min="-2" max="-2" attributes="0"/>
@@ -171,7 +166,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblMaintenanceCertificate">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Maintenance Certificate:"/>
+        <Property name="text" type="java.lang.String" value="Available:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblVehicleInsurance">
