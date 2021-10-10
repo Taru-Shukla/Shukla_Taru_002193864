@@ -5,20 +5,9 @@
  */
 package ui;
 
-import java.awt.Choice;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
 import model.UberCatalog;
 import model.UberDetails;
 
@@ -49,6 +38,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         buttonGroupchckBox = new javax.swing.ButtonGroup();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         lblTitle = new javax.swing.JLabel();
         lblBrandName = new javax.swing.JLabel();
         lblManufactureDate = new javax.swing.JLabel();
@@ -70,27 +60,43 @@ public class CreateJPanel extends javax.swing.JPanel {
         btnsave = new javax.swing.JButton();
         chckYes = new javax.swing.JCheckBox();
         chckNo = new javax.swing.JCheckBox();
+        lblAvailable = new javax.swing.JLabel();
+        radioCertified = new javax.swing.JRadioButton();
+        radioNotCertified = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(0, 0, 0));
 
         lblTitle.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Add Car Details");
 
+        lblBrandName.setForeground(new java.awt.Color(255, 255, 255));
         lblBrandName.setText("Brand Name:");
 
+        lblManufactureDate.setForeground(new java.awt.Color(255, 255, 255));
         lblManufactureDate.setText("Manufactured Date:");
 
+        lblSeatCount.setForeground(new java.awt.Color(255, 255, 255));
         lblSeatCount.setText("Seat Count:");
 
+        lblSerialNumber.setForeground(new java.awt.Color(255, 255, 255));
         lblSerialNumber.setText("Serial Number:");
 
+        lblModelNumber.setForeground(new java.awt.Color(255, 255, 255));
         lblModelNumber.setText("Model Number:");
 
+        lblCity.setForeground(new java.awt.Color(255, 255, 255));
         lblCity.setText("City:");
 
+        lblMaintenanceCertificate.setForeground(new java.awt.Color(255, 255, 255));
         lblMaintenanceCertificate.setText("Available:");
 
+        lblVehicleInsurance.setForeground(new java.awt.Color(255, 255, 255));
         lblVehicleInsurance.setText("Vehicle Insurance:");
 
+        lblRideOption.setForeground(new java.awt.Color(255, 255, 255));
         lblRideOption.setText("Ride option:");
 
         txtBrandName.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +124,8 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnsave.setBackground(new java.awt.Color(0, 0, 0));
+        btnsave.setForeground(new java.awt.Color(255, 255, 255));
         btnsave.setText("Save");
         btnsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,10 +134,30 @@ public class CreateJPanel extends javax.swing.JPanel {
         });
 
         buttonGroupchckBox.add(chckYes);
+        chckYes.setForeground(new java.awt.Color(255, 255, 255));
         chckYes.setText("Yes");
 
         buttonGroupchckBox.add(chckNo);
+        chckNo.setForeground(new java.awt.Color(255, 255, 255));
         chckNo.setText("No");
+
+        lblAvailable.setBackground(new java.awt.Color(0, 0, 0));
+        lblAvailable.setForeground(new java.awt.Color(255, 255, 255));
+        lblAvailable.setText("Maintenance Certificate");
+
+        radioCertified.setBackground(new java.awt.Color(102, 102, 102));
+        buttonGroup1.add(radioCertified);
+        radioCertified.setForeground(new java.awt.Color(255, 255, 255));
+        radioCertified.setText("Certified");
+
+        radioNotCertified.setBackground(new java.awt.Color(102, 102, 102));
+        buttonGroup1.add(radioNotCertified);
+        radioNotCertified.setForeground(new java.awt.Color(255, 255, 255));
+        radioNotCertified.setText("Not Certified");
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/uber3.jpeg"))); // NOI18N
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -140,37 +168,42 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(117, 117, 117))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(169, 169, 169)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblManufactureDate)
+                    .addComponent(lblBrandName)
+                    .addComponent(lblSerialNumber)
+                    .addComponent(lblModelNumber)
+                    .addComponent(lblMaintenanceCertificate)
+                    .addComponent(lblSeatCount)
+                    .addComponent(lblCity)
+                    .addComponent(lblVehicleInsurance)
+                    .addComponent(lblRideOption)
+                    .addComponent(lblAvailable))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtVehicleInsurance)
+                    .addComponent(comboRideOption, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtCity)
+                    .addComponent(txtModelNumber)
+                    .addComponent(txtSerialNumber)
+                    .addComponent(chcSeatCount, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtManufactureDate)
+                    .addComponent(txtBrandName)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblManufactureDate)
-                            .addComponent(lblBrandName)
-                            .addComponent(lblSerialNumber)
-                            .addComponent(lblModelNumber)
-                            .addComponent(lblMaintenanceCertificate)
-                            .addComponent(lblSeatCount)
-                            .addComponent(lblCity)
-                            .addComponent(lblVehicleInsurance)
-                            .addComponent(lblRideOption))
+                        .addComponent(chckYes)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(chckNo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(radioCertified)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtVehicleInsurance, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                            .addComponent(comboRideOption, 0, 217, Short.MAX_VALUE)
-                            .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                            .addComponent(txtModelNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                            .addComponent(txtSerialNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                            .addComponent(chcSeatCount, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtManufactureDate, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                            .addComponent(txtBrandName, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(chckYes)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(chckNo))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(297, 297, 297)
-                        .addComponent(btnsave)))
-                .addContainerGap(398, Short.MAX_VALUE))
+                        .addComponent(radioNotCertified)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(299, 299, 299)
+                .addComponent(btnsave)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,9 +247,20 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblRideOption)
                     .addComponent(comboRideOption, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                .addComponent(btnsave)
-                .addGap(68, 68, 68))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAvailable)
+                    .addComponent(radioCertified)
+                    .addComponent(radioNotCertified))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnsave)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
 
         chcSeatCount.add("2");
@@ -232,6 +276,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
         // TODO add your handling code here:
         String maintenanceCertificate=null;
+        String available = null;
         String carbrand=txtBrandName.getText();
         String manufacture=txtManufactureDate.getText();
         Integer seatCount =Integer.parseInt(chcSeatCount.getSelectedItem());
@@ -242,6 +287,12 @@ public class CreateJPanel extends javax.swing.JPanel {
             maintenanceCertificate= chckYes.getText();
         }else if(chckNo.isSelected()){
            maintenanceCertificate= chckNo.getText();
+
+        }
+        if(radioCertified.isSelected()){
+            available= radioCertified.getText();
+        }else if(radioNotCertified.isSelected()){
+           available= radioNotCertified.getText();
 
         }
         Long vehicleInsurance=Long.parseLong(txtVehicleInsurance.getText());
@@ -256,9 +307,13 @@ public class CreateJPanel extends javax.swing.JPanel {
         ud.setModelNumber(modelNumber);
         ud.setCity(city);
         ud.setMaintenanceCertificate(maintenanceCertificate);
+        ud.setAvailable(available);
         ud.setVehicleInsurance(vehicleInsurance);
         ud.setUberType(uberType);
         ud.setFleetCatalogEntryDate(fleetCreationDate);
+//        ud.setIndexNumber();
+//         int num = ud.getIndexNumber();
+//        ud.setIndexNumber(num);
         JOptionPane.showMessageDialog(this, "Car details added.");
         txtBrandName.setText("");
         txtManufactureDate.setText("");
@@ -289,11 +344,14 @@ public class CreateJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnsave;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroupchckBox;
     private java.awt.Choice chcSeatCount;
     private javax.swing.JCheckBox chckNo;
     private javax.swing.JCheckBox chckYes;
     private javax.swing.JComboBox<String> comboRideOption;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblAvailable;
     private javax.swing.JLabel lblBrandName;
     private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblMaintenanceCertificate;
@@ -304,6 +362,8 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblSerialNumber;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblVehicleInsurance;
+    private javax.swing.JRadioButton radioCertified;
+    private javax.swing.JRadioButton radioNotCertified;
     private javax.swing.JTextField txtBrandName;
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtManufactureDate;

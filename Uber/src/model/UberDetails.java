@@ -13,6 +13,14 @@ public class UberDetails {
      private String carbrand;
      private String manufacture;
      private Integer seatCount;
+
+    public String getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(String available) {
+        this.available = available;
+    }
      private Long serialNumber;
      private String modelNumber;
      private String city;
@@ -21,6 +29,9 @@ public class UberDetails {
       private String fleetCatalogUpdateDate;
      private Long vehicleInsurance;
      private String uberType;
+     private String available;
+  
+     
 
     public String getFleetCatalogEntryDate() {
         return fleetCatalogEntryDate;
