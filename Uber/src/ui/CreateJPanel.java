@@ -194,13 +194,18 @@ public class CreateJPanel extends javax.swing.JPanel {
 
         lblBrand.setForeground(new java.awt.Color(255, 0, 35));
 
+        lblDate.setBackground(new java.awt.Color(0, 0, 0));
         lblDate.setForeground(new java.awt.Color(255, 0, 35));
+        lblDate.setText("YYYY-MM-DD");
 
+        lblSerial.setBackground(new java.awt.Color(0, 0, 0));
         lblSerial.setForeground(new java.awt.Color(255, 0, 35));
+        lblSerial.setText("17 Digits");
 
         lblModelNum.setForeground(new java.awt.Color(255, 0, 35));
 
         lblVehicle.setForeground(new java.awt.Color(255, 0, 35));
+        lblVehicle.setText("8-10 Digits");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -248,9 +253,9 @@ public class CreateJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblSerial, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
+                            .addComponent(lblSerial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblModelNum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblVehicle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(lblVehicle, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(lblBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))

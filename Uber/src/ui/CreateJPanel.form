@@ -75,9 +75,9 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="lblSerial" alignment="0" pref="294" max="32767" attributes="0"/>
+                          <Component id="lblSerial" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblModelNum" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblVehicle" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblVehicle" alignment="0" pref="294" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -401,16 +401,24 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblDate">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="23" green="0" red="ff" type="rgb"/>
         </Property>
+        <Property name="text" type="java.lang.String" value="YYYY-MM-DD"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblSerial">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="23" green="0" red="ff" type="rgb"/>
         </Property>
+        <Property name="text" type="java.lang.String" value="17 Digits"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblModelNum">
@@ -425,6 +433,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="23" green="0" red="ff" type="rgb"/>
         </Property>
+        <Property name="text" type="java.lang.String" value="8-10 Digits"/>
       </Properties>
     </Component>
   </SubComponents>
