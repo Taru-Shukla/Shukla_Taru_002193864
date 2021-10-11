@@ -55,7 +55,6 @@
                   <Component id="txtSerialNumber" alignment="0" max="32767" attributes="0"/>
                   <Component id="chcSeatCount" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
                   <Component id="txtManufactureDate" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txtBrandName" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="chckYes" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -66,14 +65,25 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="radioNotCertified" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="txtBrandName" alignment="0" min="-2" pref="274" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblBrand" min="-2" pref="119" max="-2" attributes="0"/>
-                  <Component id="lblVehicle" min="-2" pref="119" max="-2" attributes="0"/>
-                  <Component id="lblModelNum" min="-2" pref="119" max="-2" attributes="0"/>
-                  <Component id="lblSerial" min="-2" pref="119" max="-2" attributes="0"/>
-                  <Component id="lblDate" min="-2" pref="119" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblDate" min="-2" pref="273" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="lblSerial" alignment="0" pref="294" max="32767" attributes="0"/>
+                          <Component id="lblModelNum" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblVehicle" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Component id="lblBrand" min="-2" pref="270" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -94,13 +104,13 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblBrandName" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtBrandName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblBrand" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblBrand" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblManufactureDate" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtManufactureDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDate" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
@@ -111,13 +121,13 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblSerialNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtSerialNumber" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblSerial" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblSerial" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblModelNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtModelNumber" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblModelNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblModelNum" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -134,7 +144,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtVehicleInsurance" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblVehicleInsurance" alignment="3" min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="lblVehicle" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblVehicle" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
