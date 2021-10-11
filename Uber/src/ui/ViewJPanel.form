@@ -30,10 +30,11 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="lblTitle" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="1080" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -87,6 +88,7 @@
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="630" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -101,11 +103,10 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-              <Component id="lblTitle" min="-2" pref="28" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblTitle" min="-2" pref="75" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="176" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblBrandName" min="-2" max="-2" attributes="0"/>
                   <Component id="txtBrandName" min="-2" max="-2" attributes="0"/>
@@ -146,7 +147,7 @@
                   <Component id="lblVehicleInsurance" alignment="3" min="-2" pref="10" max="-2" attributes="0"/>
                   <Component id="txtVehicleInsurance" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblRideOption" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="comboRideOption" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -159,7 +160,7 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnUpdate" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="44" max="32767" attributes="0"/>
+              <EmptySpace pref="50" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -171,13 +172,13 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="18" style="1"/>
+          <Font name="Apple SD Gothic Neo" size="24" style="3"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="View Car Details &amp; Update"/>
+        <Property name="text" type="java.lang.String" value="See your Uber Details &amp; Update"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -197,18 +198,18 @@
             </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="12" rowCount="0">
-                <Column editable="true" title="Brand" type="java.lang.Object"/>
-                <Column editable="true" title="Manufactured Date" type="java.lang.Object"/>
-                <Column editable="true" title="Seat Count" type="java.lang.Object"/>
-                <Column editable="true" title="Serial Number" type="java.lang.Object"/>
-                <Column editable="true" title="Model Number" type="java.lang.Object"/>
-                <Column editable="true" title="City" type="java.lang.Object"/>
-                <Column editable="true" title="Availability" type="java.lang.Object"/>
-                <Column editable="true" title="Maintenance" type="java.lang.Object"/>
-                <Column editable="true" title="Vehicle Insurance" type="java.lang.Object"/>
-                <Column editable="true" title="Uber Type" type="java.lang.Object"/>
-                <Column editable="true" title="Entry Date" type="java.lang.Object"/>
-                <Column editable="true" title="Updation Date" type="java.lang.Object"/>
+                <Column editable="false" title="Brand" type="java.lang.Object"/>
+                <Column editable="false" title="Manufactured Date" type="java.lang.Object"/>
+                <Column editable="false" title="Seat Count" type="java.lang.Object"/>
+                <Column editable="false" title="Serial Number" type="java.lang.Object"/>
+                <Column editable="false" title="Model Number" type="java.lang.Object"/>
+                <Column editable="false" title="City" type="java.lang.Object"/>
+                <Column editable="false" title="Availability" type="java.lang.Object"/>
+                <Column editable="false" title="Maintenance Certificate" type="java.lang.Object"/>
+                <Column editable="false" title="Vehicle Insurance" type="java.lang.Object"/>
+                <Column editable="false" title="Uber Type" type="java.lang.Object"/>
+                <Column editable="false" title="Entry Date" type="java.lang.Object"/>
+                <Column editable="false" title="Updation Date" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -497,7 +498,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Not Certified"/>
+        <Property name="text" type="java.lang.String" value="Expired"/>
       </Properties>
     </Component>
   </SubComponents>

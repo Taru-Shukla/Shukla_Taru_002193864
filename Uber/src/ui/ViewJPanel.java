@@ -75,10 +75,10 @@ public class ViewJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 0, 0));
 
         lblTitle.setBackground(new java.awt.Color(0, 0, 0));
-        lblTitle.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Apple SD Gothic Neo", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setText("View Car Details & Update");
+        lblTitle.setText("See your Uber Details & Update");
 
         tblUberDetails.setBackground(new java.awt.Color(51, 51, 51));
         tblUberDetails.setForeground(new java.awt.Color(255, 255, 255));
@@ -87,9 +87,17 @@ public class ViewJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Brand", "Manufactured Date", "Seat Count", "Serial Number", "Model Number", "City", "Availability", "Maintenance", "Vehicle Insurance", "Uber Type", "Entry Date", "Updation Date"
+                "Brand", "Manufactured Date", "Seat Count", "Serial Number", "Model Number", "City", "Availability", "Maintenance Certificate", "Vehicle Insurance", "Uber Type", "Entry Date", "Updation Date"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblUberDetails.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblUberDetailsMouseClicked(evt);
@@ -192,7 +200,7 @@ public class ViewJPanel extends javax.swing.JPanel {
 
         radioNotCertified.setBackground(new java.awt.Color(102, 102, 102));
         radioNotCertified.setForeground(new java.awt.Color(255, 255, 255));
-        radioNotCertified.setText("Not Certified");
+        radioNotCertified.setText("Expired");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -202,10 +210,11 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(51, 51, 51))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -246,7 +255,8 @@ public class ViewJPanel extends javax.swing.JPanel {
                                         .addComponent(radioCertified)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(radioNotCertified)))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(630, 630, 630)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(123, 123, 123)
@@ -256,11 +266,10 @@ public class ViewJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblBrandName)
                     .addComponent(txtBrandName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -293,7 +302,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblRideOption)
                     .addComponent(comboRideOption, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -304,7 +313,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addComponent(radioNotCertified))
                 .addGap(18, 18, 18)
                 .addComponent(btnUpdate)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         chcSeatCount.add("2");

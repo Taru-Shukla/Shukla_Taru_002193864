@@ -67,6 +67,14 @@
                       <Component id="radioNotCertified" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblBrand" min="-2" pref="119" max="-2" attributes="0"/>
+                  <Component id="lblVehicle" min="-2" pref="119" max="-2" attributes="0"/>
+                  <Component id="lblModelNum" min="-2" pref="119" max="-2" attributes="0"/>
+                  <Component id="lblSerial" min="-2" pref="119" max="-2" attributes="0"/>
+                  <Component id="lblDate" min="-2" pref="119" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
@@ -86,11 +94,13 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblBrandName" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtBrandName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblBrand" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="lblManufactureDate" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtManufactureDate" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblManufactureDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtManufactureDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDate" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
@@ -101,11 +111,13 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblSerialNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtSerialNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblSerial" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblModelNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtModelNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblModelNum" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -122,6 +134,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtVehicleInsurance" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblVehicleInsurance" alignment="3" min="-2" pref="10" max="-2" attributes="0"/>
+                  <Component id="lblVehicle" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -238,11 +251,13 @@
     <Component class="javax.swing.JTextField" name="txtBrandName">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBrandNameActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtBrandNameKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtManufactureDate">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtManufactureDateActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtManufactureDateKeyReleased"/>
       </Events>
     </Component>
     <Component class="java.awt.Choice" name="chcSeatCount">
@@ -253,13 +268,20 @@
     <Component class="javax.swing.JTextField" name="txtSerialNumber">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSerialNumberActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtSerialNumberKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtModelNumber">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtModelNumberKeyReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCity">
     </Component>
     <Component class="javax.swing.JTextField" name="txtVehicleInsurance">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtVehicleInsuranceKeyReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="comboRideOption">
       <Properties>
@@ -347,7 +369,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Not Certified"/>
+        <Property name="text" type="java.lang.String" value="Expired"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
@@ -358,7 +380,41 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/images/uber3.jpeg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblBrand">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="23" green="0" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDate">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="23" green="0" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblSerial">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="23" green="0" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblModelNum">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="23" green="0" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblVehicle">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="23" green="0" red="ff" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>

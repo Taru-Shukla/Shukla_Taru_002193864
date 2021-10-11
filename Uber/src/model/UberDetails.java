@@ -21,7 +21,7 @@ public class UberDetails {
     public void setAvailable(String available) {
         this.available = available;
     }
-     private Long serialNumber;
+     private String serialNumber;
      private String modelNumber;
      private String city;
      private String maintenanceCertificate;
@@ -66,11 +66,11 @@ public class UberDetails {
         this.seatCount = seatCount;
     }
 
-    public Long getSerialNumber() {
+    public String getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(Long serialNumber) {
+    public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 
