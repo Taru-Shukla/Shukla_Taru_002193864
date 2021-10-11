@@ -74,7 +74,7 @@ public class CreateJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(0, 0, 0));
 
-        lblTitle.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Apple SD Gothic Neo", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Add Car Details");

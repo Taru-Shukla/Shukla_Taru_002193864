@@ -71,6 +71,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblAvailable = new javax.swing.JLabel();
         radioCertified = new javax.swing.JRadioButton();
         radioNotCertified = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 0, 0));
 
@@ -120,38 +121,47 @@ public class ViewJPanel extends javax.swing.JPanel {
         });
 
         lblBrandName.setBackground(new java.awt.Color(51, 51, 51));
+        lblBrandName.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         lblBrandName.setForeground(new java.awt.Color(255, 255, 255));
         lblBrandName.setText("Brand Name:");
 
         lblManufactureDate.setBackground(new java.awt.Color(0, 0, 0));
+        lblManufactureDate.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         lblManufactureDate.setForeground(new java.awt.Color(255, 255, 255));
         lblManufactureDate.setText("Manufactured Date:");
 
         lblSeatCount.setBackground(new java.awt.Color(0, 0, 0));
+        lblSeatCount.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         lblSeatCount.setForeground(new java.awt.Color(255, 255, 255));
         lblSeatCount.setText("Seat Count:");
 
         lblSerialNumber.setBackground(new java.awt.Color(0, 0, 0));
+        lblSerialNumber.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         lblSerialNumber.setForeground(new java.awt.Color(255, 255, 255));
         lblSerialNumber.setText("Serial Number:");
 
         lblModelNumber.setBackground(new java.awt.Color(0, 0, 0));
+        lblModelNumber.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         lblModelNumber.setForeground(new java.awt.Color(255, 255, 255));
         lblModelNumber.setText("Model Number:");
 
         lblCity.setBackground(new java.awt.Color(0, 0, 0));
+        lblCity.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         lblCity.setForeground(new java.awt.Color(255, 255, 255));
         lblCity.setText("City:");
 
         lblMaintenanceCertificate.setBackground(new java.awt.Color(0, 0, 0));
+        lblMaintenanceCertificate.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         lblMaintenanceCertificate.setForeground(new java.awt.Color(255, 255, 255));
         lblMaintenanceCertificate.setText("Available:");
 
         lblVehicleInsurance.setBackground(new java.awt.Color(0, 0, 0));
+        lblVehicleInsurance.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         lblVehicleInsurance.setForeground(new java.awt.Color(255, 255, 255));
         lblVehicleInsurance.setText("Vehicle Insurance:");
 
         lblRideOption.setBackground(new java.awt.Color(0, 0, 0));
+        lblRideOption.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         lblRideOption.setForeground(new java.awt.Color(255, 255, 255));
         lblRideOption.setText("Ride option:");
 
@@ -182,25 +192,34 @@ public class ViewJPanel extends javax.swing.JPanel {
 
         chckYes.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupchckBox.add(chckYes);
+        chckYes.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         chckYes.setForeground(new java.awt.Color(255, 255, 255));
         chckYes.setText("Yes");
 
         chckNo.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupchckBox.add(chckNo);
+        chckNo.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         chckNo.setForeground(new java.awt.Color(255, 255, 255));
         chckNo.setText("No");
 
         lblAvailable.setBackground(new java.awt.Color(0, 0, 0));
+        lblAvailable.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         lblAvailable.setForeground(new java.awt.Color(255, 255, 255));
         lblAvailable.setText("Maintenance Certificate");
 
         radioCertified.setBackground(new java.awt.Color(102, 102, 102));
+        radioCertified.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         radioCertified.setForeground(new java.awt.Color(255, 255, 255));
         radioCertified.setText("Certified");
 
         radioNotCertified.setBackground(new java.awt.Color(102, 102, 102));
+        radioNotCertified.setFont(new java.awt.Font("Apple SD Gothic Neo", 1, 13)); // NOI18N
         radioNotCertified.setForeground(new java.awt.Color(255, 255, 255));
         radioNotCertified.setText("Expired");
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/uber6.jpeg"))); // NOI18N
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -214,38 +233,38 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addGap(51, 51, 51))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jScrollPane1))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1593, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(75, 75, 75)
-                                .addComponent(lblBrandName))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(lblAvailable))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblManufactureDate, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblSeatCount, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblSerialNumber, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblModelNumber, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblCity, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblMaintenanceCertificate, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblVehicleInsurance, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblRideOption, javax.swing.GroupLayout.Alignment.TRAILING))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(chcSeatCount, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtSerialNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
-                                .addComponent(txtManufactureDate)
-                                .addComponent(txtModelNumber)
-                                .addComponent(txtCity)
-                                .addComponent(txtVehicleInsurance)
-                                .addComponent(comboRideOption, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(75, 75, 75)
+                                        .addComponent(lblBrandName))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(lblAvailable))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblManufactureDate, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblSeatCount, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblSerialNumber, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblModelNumber, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblCity, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblMaintenanceCertificate, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblVehicleInsurance, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblRideOption, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(chcSeatCount, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtSerialNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                                        .addComponent(txtManufactureDate)
+                                        .addComponent(txtModelNumber)
+                                        .addComponent(txtCity)
+                                        .addComponent(txtVehicleInsurance)
+                                        .addComponent(comboRideOption, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(txtBrandName, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(chckYes)
@@ -254,14 +273,13 @@ public class ViewJPanel extends javax.swing.JPanel {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(radioCertified)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radioNotCertified)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(630, 630, 630)))
+                                        .addComponent(radioNotCertified))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(123, 123, 123)
+                                .addComponent(btnUpdate)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 733, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(123, 123, 123)
-                .addComponent(btnUpdate)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,29 +309,33 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addComponent(txtModelNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCity)
-                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblMaintenanceCertificate)
-                    .addComponent(chckYes)
-                    .addComponent(chckNo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblRideOption)
-                    .addComponent(comboRideOption, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAvailable)
-                    .addComponent(radioCertified)
-                    .addComponent(radioNotCertified))
-                .addGap(18, 18, 18)
-                .addComponent(btnUpdate)
-                .addContainerGap(50, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblMaintenanceCertificate)
+                            .addComponent(chckYes)
+                            .addComponent(chckNo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtVehicleInsurance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblRideOption)
+                            .addComponent(comboRideOption, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblAvailable)
+                            .addComponent(radioCertified)
+                            .addComponent(radioNotCertified))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnUpdate))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblCity)
+                        .addGap(9, 9, 9)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
         chcSeatCount.add("2");
@@ -423,6 +445,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JCheckBox chckNo;
     private javax.swing.JCheckBox chckYes;
     private javax.swing.JComboBox<String> comboRideOption;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAvailable;
     private javax.swing.JLabel lblBrandName;
