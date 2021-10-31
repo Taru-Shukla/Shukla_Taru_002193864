@@ -24,3 +24,4 @@
 # virtual machine crash logs
 hs_err_pid*
 
+/Assignment3/dist/

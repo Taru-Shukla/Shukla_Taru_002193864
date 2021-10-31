@@ -6,7 +6,6 @@
 package ui;
 
 import model.PatientMedicalDetails;
-import model.PatientPersonalDetails;
 
 /**
  *
@@ -22,7 +21,7 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
         initComponents();
        patientMedicalDetails =  new PatientMedicalDetails();
-       cityCombo.setSelectedItem(null);
+    
 
     }
 
@@ -35,144 +34,125 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblCity = new javax.swing.JLabel();
-        lblNeighborhood = new javax.swing.JLabel();
-        neighborhoodCombo = new javax.swing.JComboBox<>();
-        btnSubmit = new javax.swing.JButton();
-        cityCombo = new javax.swing.JComboBox<>();
+        jSplitPane1 = new javax.swing.JSplitPane();
+        controlPanel = new javax.swing.JPanel();
+        btnVitalSign = new javax.swing.JButton();
+        btnEncounterSign = new javax.swing.JButton();
+        btnPatientDirectory = new javax.swing.JButton();
+        btnPatientVital = new javax.swing.JButton();
+        workPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblCity.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        lblCity.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblCity.setText("City");
-
-        lblNeighborhood.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        lblNeighborhood.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblNeighborhood.setText("Neighborhood");
-
-        btnSubmit.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnSubmit.setText("Submit");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btnVitalSign.setText("Patient Entry");
+        btnVitalSign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
+                btnVitalSignActionPerformed(evt);
             }
         });
 
-        cityCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "Worcester", "Springfield", "Cambridge", "Lowell" }));
-        cityCombo.addActionListener(new java.awt.event.ActionListener() {
+        btnEncounterSign.setText("History");
+        btnEncounterSign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cityComboActionPerformed(evt);
+                btnEncounterSignActionPerformed(evt);
             }
         });
+
+        btnPatientDirectory.setText("Patient Directory");
+        btnPatientDirectory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPatientDirectoryActionPerformed(evt);
+            }
+        });
+
+        btnPatientVital.setText("Patient Vital Entry");
+        btnPatientVital.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPatientVitalActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
+        controlPanel.setLayout(controlPanelLayout);
+        controlPanelLayout.setHorizontalGroup(
+            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelLayout.createSequentialGroup()
+                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnVitalSign, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEncounterSign, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(controlPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnPatientDirectory)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(btnPatientVital, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        controlPanelLayout.setVerticalGroup(
+            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelLayout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(btnVitalSign)
+                .addGap(74, 74, 74)
+                .addComponent(btnPatientVital)
+                .addGap(95, 95, 95)
+                .addComponent(btnPatientDirectory)
+                .addGap(87, 87, 87)
+                .addComponent(btnEncounterSign)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+
+        jSplitPane1.setLeftComponent(controlPanel);
+
+        javax.swing.GroupLayout workPanelLayout = new javax.swing.GroupLayout(workPanel);
+        workPanel.setLayout(workPanelLayout);
+        workPanelLayout.setHorizontalGroup(
+            workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 687, Short.MAX_VALUE)
+        );
+        workPanelLayout.setVerticalGroup(
+            workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 596, Short.MAX_VALUE)
+        );
+
+        jSplitPane1.setRightComponent(workPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblNeighborhood, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(neighborhoodCombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cityCombo, 0, 232, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(185, 185, 185)
-                        .addComponent(btnSubmit)))
-                .addContainerGap(327, Short.MAX_VALUE))
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(148, 148, 148)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCity)
-                    .addComponent(cityCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(neighborhoodCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblNeighborhood))
-                .addGap(40, 40, 40)
-                .addComponent(btnSubmit)
-                .addContainerGap(305, Short.MAX_VALUE))
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+    private void btnEncounterSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEncounterSignActionPerformed
         // TODO add your handling code here:
-     String city=null;
-     city =  cityCombo.getSelectedItem().toString();
-     String neighborhood =null;
-    neighborhood = neighborhoodCombo.getSelectedItem().toString();
-             System.out.println(city);
+          HistoryJPanel historyPanel = new HistoryJPanel(patientMedicalDetails); 
+        jSplitPane1.setRightComponent(historyPanel); 
+    }//GEN-LAST:event_btnEncounterSignActionPerformed
 
-        System.out.println(neighborhood);
-   PatientPersonalDetails details = patientMedicalDetails.addNewDetails();
-        System.out.println("line 116");
+    private void btnVitalSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVitalSignActionPerformed
+             // TODO add your handling code here:
+        PatientJPanel patientPanel = new PatientJPanel(patientMedicalDetails); 
+        jSplitPane1.setRightComponent(patientPanel); 
+    }//GEN-LAST:event_btnVitalSignActionPerformed
 
-     details.setCity(city);
-      details.setNeighborhood(neighborhood);
-
-       DirectoryJFrame panel = new DirectoryJFrame();
-       panel.setVisible(true);
-    }//GEN-LAST:event_btnSubmitActionPerformed
-
-    private void cityComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cityComboActionPerformed
+    private void btnPatientDirectoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientDirectoryActionPerformed
         // TODO add your handling code here:
-        try{
-        if(cityCombo.getSelectedItem().equals("Boston")){
-            
-            neighborhoodCombo.removeAllItems();
-            neighborhoodCombo.addItem("Back Bay");
-            neighborhoodCombo.addItem("Downtown");
-            neighborhoodCombo.addItem("Beacon hill");
-            neighborhoodCombo.addItem("Brighton");
-            neighborhoodCombo.addItem("Mission Hill");
-            neighborhoodCombo.addItem("Jamaica Plain");
-            neighborhoodCombo.addItem("Roxbury");
-            neighborhoodCombo.setSelectedItem(null);
-        } else if(cityCombo.getSelectedItem().equals("Worcester")){
-            
-            neighborhoodCombo.removeAllItems();
-            neighborhoodCombo.addItem("West Side");
-            neighborhoodCombo.addItem("Green Hill");
-            neighborhoodCombo.addItem("Lincoln");
-            neighborhoodCombo.addItem("Cider Mill");
-            neighborhoodCombo.setSelectedItem(null);
-        } else if(cityCombo.getSelectedItem().equals("Springfield")){
-            
-            neighborhoodCombo.removeAllItems();
-            neighborhoodCombo.addItem("Pelham");
-            neighborhoodCombo.addItem("Longmeadow");
-            neighborhoodCombo.addItem("Northampton");
-            neighborhoodCombo.addItem("Wilbraham");
-            neighborhoodCombo.setSelectedItem(null);
-        } else if(cityCombo.getSelectedItem().equals("Cambridge")){
-            
-            neighborhoodCombo.removeAllItems();
-            neighborhoodCombo.addItem("MIT");
-            neighborhoodCombo.addItem("Cambridgeport");
-            neighborhoodCombo.addItem("Riverside");
-            neighborhoodCombo.setSelectedItem(null);
-        } else if(cityCombo.getSelectedItem().equals("Lowell")){
-            
-            neighborhoodCombo.removeAllItems();
-            neighborhoodCombo.addItem("Pawtucketville");
-            neighborhoodCombo.addItem("Belvidere");
-            neighborhoodCombo.addItem("Centralville");
-            neighborhoodCombo.setSelectedItem(null);
-        }
-        } catch(Exception e){
-            System.out.println(e);
-        }
-    }//GEN-LAST:event_cityComboActionPerformed
+         DirectoryJPanel directoryPanel = new DirectoryJPanel(patientMedicalDetails); 
+        jSplitPane1.setRightComponent(directoryPanel); 
+    }//GEN-LAST:event_btnPatientDirectoryActionPerformed
+
+    private void btnPatientVitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientVitalActionPerformed
+        // TODO add your handling code here:
+        PatientVitalJPanel patientVitalJPanel = new PatientVitalJPanel(patientMedicalDetails);
+        jSplitPane1.setRightComponent(patientVitalJPanel); 
+    }//GEN-LAST:event_btnPatientVitalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -210,10 +190,12 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSubmit;
-    private javax.swing.JComboBox<String> cityCombo;
-    private javax.swing.JLabel lblCity;
-    private javax.swing.JLabel lblNeighborhood;
-    private javax.swing.JComboBox<String> neighborhoodCombo;
+    private javax.swing.JButton btnEncounterSign;
+    private javax.swing.JButton btnPatientDirectory;
+    private javax.swing.JButton btnPatientVital;
+    private javax.swing.JButton btnVitalSign;
+    private javax.swing.JPanel controlPanel;
+    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JPanel workPanel;
     // End of variables declaration//GEN-END:variables
 }

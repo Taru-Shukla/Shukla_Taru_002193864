@@ -11,23 +11,43 @@ package model;
  */
 public class PatientPersonalDetails {
     
-    
- private static int patientId = 0;
+ private String date;   
+ private String healthPlanId;
  private String name;
  private Integer age;
  private String gender;
  private String address;
  private String neighborhood;
  private String city;
- private Integer pincode;
+  private String country;
+  private String DOB;
 
-    public static int getPatientId() {
-        return patientId;
+private Float bodyTemp; 
+private Integer pulseRate;
+private Integer respirationRate;
+private Integer bloodPressure;
+   public String getDOB() {
+        return DOB;
     }
 
-    public static void setPatientId(int patientId) {
-        PatientPersonalDetails.patientId = patientId;
+    public void setDOB(String DOB) {
+        this.DOB = DOB;
     }
+ public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+    public String getHealthPlanId() {
+        return healthPlanId;
+    }
+
+    public void setHealthPlanId(String healthPlanId) {
+        this.healthPlanId = healthPlanId;
+    }
+
 
     public String getName() {
         return name;
@@ -77,14 +97,6 @@ public class PatientPersonalDetails {
         this.city = city;
     }
 
-    public Integer getPincode() {
-        return pincode;
-    }
-
-    public void setPincode(Integer pincode) {
-        this.pincode = pincode;
-    }
-
     public String getCountry() {
         return country;
     }
@@ -92,18 +104,13 @@ public class PatientPersonalDetails {
     public void setCountry(String country) {
         this.country = country;
     }
- private String country;
 
-public static int generateId() {
-   return ++patientId;
-}private Integer bodyTemp; 
-     private Integer pulseRate;
 
-    public Integer getBodyTemp() {
+    public Float getBodyTemp() {
         return bodyTemp;
     }
 
-    public void setBodyTemp(Integer bodyTemp) {
+    public void setBodyTemp(Float bodyTemp) {
         this.bodyTemp = bodyTemp;
     }
 
@@ -131,12 +138,10 @@ public static int generateId() {
         this.bloodPressure = bloodPressure;
     }
 
-
-    public void setPatientId(Integer patientId) {
-        this.patientId = patientId;
+      @Override
+    public String toString(){
+        return date;
     }
-     private Integer respirationRate;
-     private Integer bloodPressure;
      
 
     

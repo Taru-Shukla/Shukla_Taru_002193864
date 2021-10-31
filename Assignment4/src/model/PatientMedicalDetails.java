@@ -23,17 +23,15 @@ public class PatientMedicalDetails {
     }
 
     public void setPatientMedicalDetails(ArrayList<PatientPersonalDetails> patientMedicalDetails) {
-         System.out.println("line 26 ");
         this.patientMedicalDetails = patientMedicalDetails;
-          System.out.println("line 28 "+patientMedicalDetails);
     }
      public PatientPersonalDetails addNewDetails(){
-         System.out.println("line 29 ");
         PatientPersonalDetails details = new PatientPersonalDetails();
-         System.out.println("line 30: "+details);
         patientMedicalDetails.add(details);
-        System.out.println("line 32: "+details);
         return details;
     } 
+     public void deleteDetails(PatientPersonalDetails details){
+         patientMedicalDetails.remove(details);
+        }
              
 }
