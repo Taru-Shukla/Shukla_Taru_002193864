@@ -64,49 +64,46 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTablePersonDirectory = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setForeground(new java.awt.Color(0, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+
+        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
         lblCity.setBackground(new java.awt.Color(0, 0, 0));
         lblCity.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         lblCity.setText("Select City");
-        lblCity.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
 
         lblPersonName.setBackground(new java.awt.Color(255, 255, 255));
         lblPersonName.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         lblPersonName.setText("Name");
-        lblPersonName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
         lblPersonName.setPreferredSize(new java.awt.Dimension(60, 15));
 
-        txtPersonName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
+        txtPersonName.setBorder(null);
 
         lblAge.setBackground(new java.awt.Color(153, 153, 255));
         lblAge.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         lblAge.setText("Age");
-        lblAge.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
 
-        txtPersonAge.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
+        txtPersonAge.setBorder(null);
 
-        lblGender.setBackground(new java.awt.Color(0, 255, 255));
-        lblGender.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        lblGender.setBackground(new java.awt.Color(255, 255, 255));
+        lblGender.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         lblGender.setText("Gender");
-        lblGender.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
         lblGender.setPreferredSize(new java.awt.Dimension(60, 15));
 
         comboBoxCity.setMaximumRowCount(4);
         comboBoxCity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "NewYork", "Worcester", "Springfield", "Cambridge", "Lowell", " " }));
         comboBoxCity.setSelectedIndex(-1);
-        comboBoxCity.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
         comboBoxCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboBoxCityActionPerformed(evt);
             }
         });
 
-        jRadioButtonMale.setBackground(new java.awt.Color(0, 255, 255));
+        jRadioButtonMale.setBackground(new java.awt.Color(0, 0, 0));
         btnGroupGender.add(jRadioButtonMale);
-        jRadioButtonMale.setForeground(new java.awt.Color(0, 255, 255));
         jRadioButtonMale.setText("Male");
         jRadioButtonMale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,39 +111,35 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
             }
         });
 
-        jRadioButtonFemale.setBackground(new java.awt.Color(0, 255, 255));
+        jRadioButtonFemale.setBackground(new java.awt.Color(0, 0, 0));
         btnGroupGender.add(jRadioButtonFemale);
-        jRadioButtonFemale.setForeground(new java.awt.Color(0, 255, 255));
         jRadioButtonFemale.setText("Female");
 
-        jRadioButtonOthers.setBackground(new java.awt.Color(0, 255, 255));
+        jRadioButtonOthers.setBackground(new java.awt.Color(0, 0, 0));
         btnGroupGender.add(jRadioButtonOthers);
-        jRadioButtonOthers.setForeground(new java.awt.Color(0, 255, 255));
         jRadioButtonOthers.setText("Others");
 
         lblCommunity.setBackground(new java.awt.Color(0, 255, 255));
         lblCommunity.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         lblCommunity.setText("Select Community");
-        lblCommunity.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
 
         comboBoxCommunity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Allston", "Back Bay", "Mission Hill", "Roxbury" }));
         comboBoxCommunity.setSelectedIndex(-1);
-        comboBoxCommunity.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
         comboBoxCommunity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboBoxCommunityActionPerformed(evt);
             }
         });
 
-        lblResidence.setBackground(new java.awt.Color(0, 255, 255));
+        lblResidence.setBackground(new java.awt.Color(0, 0, 0));
         lblResidence.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         lblResidence.setText("Residence");
-        lblResidence.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
 
-        txtResidence.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
+        txtResidence.setBorder(null);
 
-        btnAdd.setBackground(new java.awt.Color(0, 255, 255));
+        btnAdd.setBackground(new java.awt.Color(255, 255, 255));
         btnAdd.setText("Add");
+        btnAdd.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAdd.setSize(new java.awt.Dimension(20, 10));
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,9 +150,8 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         lblContactNumber.setBackground(new java.awt.Color(0, 255, 255));
         lblContactNumber.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         lblContactNumber.setText("Contact Number");
-        lblContactNumber.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
 
-        txtContactNumber.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
+        txtContactNumber.setBorder(null);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -171,14 +163,11 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(lblGender, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jRadioButtonMale)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButtonFemale)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButtonOthers))
-                            .addComponent(btnAdd, javax.swing.GroupLayout.Alignment.TRAILING)))
+                        .addComponent(jRadioButtonMale)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButtonFemale)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButtonOthers))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -206,7 +195,10 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(lblCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(comboBoxCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(comboBoxCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(276, 276, 276)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -244,7 +236,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setText("Create Person Profile");
 
         jTablePersonDirectory.setModel(new javax.swing.table.DefaultTableModel(
@@ -273,10 +265,15 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTablePersonDirectory);
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/download2.jpeg"))); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -285,11 +282,11 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(346, 346, 346)
                         .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,7 +297,9 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(271, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -418,6 +417,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> comboBoxCity;
     private javax.swing.JComboBox<String> comboBoxCommunity;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButtonFemale;
