@@ -59,8 +59,6 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         lblResidence = new javax.swing.JLabel();
         txtResidence = new javax.swing.JTextField();
         btnAdd = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
         lblContactNumber = new javax.swing.JLabel();
         txtContactNumber = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -70,12 +68,12 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setForeground(new java.awt.Color(0, 255, 255));
 
-        lblCity.setBackground(new java.awt.Color(0, 255, 255));
+        lblCity.setBackground(new java.awt.Color(0, 0, 0));
         lblCity.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         lblCity.setText("Select City");
         lblCity.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
 
-        lblPersonName.setBackground(new java.awt.Color(0, 255, 255));
+        lblPersonName.setBackground(new java.awt.Color(255, 255, 255));
         lblPersonName.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         lblPersonName.setText("Name");
         lblPersonName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
@@ -83,7 +81,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
 
         txtPersonName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
 
-        lblAge.setBackground(new java.awt.Color(0, 255, 255));
+        lblAge.setBackground(new java.awt.Color(153, 153, 255));
         lblAge.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         lblAge.setText("Age");
         lblAge.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 2, true));
@@ -156,22 +154,6 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnDelete.setBackground(new java.awt.Color(0, 255, 255));
-        btnDelete.setText("Delete");
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
-            }
-        });
-
-        btnUpdate.setBackground(new java.awt.Color(0, 255, 255));
-        btnUpdate.setText("Update");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
-            }
-        });
-
         lblContactNumber.setBackground(new java.awt.Color(0, 255, 255));
         lblContactNumber.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         lblContactNumber.setText("Contact Number");
@@ -186,6 +168,17 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(101, 101, 101)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(lblGender, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jRadioButtonMale)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButtonFemale)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButtonOthers))
+                            .addComponent(btnAdd, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -213,23 +206,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(lblCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(comboBoxCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblGender, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnAdd)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnDelete)
-                                .addGap(173, 173, 173)
-                                .addComponent(btnUpdate))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jRadioButtonMale)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButtonFemale)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButtonOthers)))))
+                                .addComponent(comboBoxCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -263,10 +240,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
                     .addComponent(jRadioButtonFemale)
                     .addComponent(jRadioButtonOthers))
                 .addGap(32, 32, 32)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAdd)
-                    .addComponent(btnDelete)
-                    .addComponent(btnUpdate))
+                .addComponent(btnAdd)
                 .addContainerGap())
         );
 
@@ -397,16 +371,6 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnAddActionPerformed
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_btnDeleteActionPerformed
-
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_btnUpdateActionPerformed
-
     private void jTablePersonDirectoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTablePersonDirectoryMouseClicked
         // TODO add your handling code here:
 
@@ -450,9 +414,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
-    private javax.swing.JButton btnDelete;
     private javax.swing.ButtonGroup btnGroupGender;
-    private javax.swing.JButton btnUpdate;
     private javax.swing.JComboBox<String> comboBoxCity;
     private javax.swing.JComboBox<String> comboBoxCommunity;
     private javax.swing.JLabel jLabel1;

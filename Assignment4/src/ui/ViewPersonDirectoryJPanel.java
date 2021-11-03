@@ -45,6 +45,7 @@ public class ViewPersonDirectoryJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableViewPersonDirectory = new javax.swing.JTable();
@@ -88,11 +89,11 @@ public class ViewPersonDirectoryJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane1))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(395, 395, 395)
                         .addComponent(lblPersonDirectory)
-                        .addGap(0, 160, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -102,31 +103,29 @@ public class ViewPersonDirectoryJPanel extends javax.swing.JPanel {
                 .addComponent(lblPersonDirectory)
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(240, Short.MAX_VALUE))
+                .addContainerGap(739, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTableViewPersonDirectoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableViewPersonDirectoryMouseClicked
         // TODO add your handling code here:
-
+        
     }//GEN-LAST:event_jTableViewPersonDirectoryMouseClicked
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableViewPersonDirectory;
@@ -136,7 +135,33 @@ public class ViewPersonDirectoryJPanel extends javax.swing.JPanel {
     private void populateTable() {
         defaultTableModel = (DefaultTableModel)jTableViewPersonDirectory.getModel();
         defaultTableModel.setRowCount(0);
-        
+        Object[] row1 = new Object[7];
+            row1[0]= "Taru";
+            row1[1]= 12;
+            row1[2]= "Female";
+            row1[3]= "8573997825";
+            row1[4]= "881 huntington";
+            row1[5]= "Mission Hill";
+            row1[6]= "Boston";
+            defaultTableModel.addRow(row1); 
+            Object[] row2 = new Object[7];
+            row2[0]= "Tarun";
+            row2[1]= 12;
+            row2[2]= "Female";
+            row2[3]= "8573997828";
+            row2[4]= "881 huntington";
+            row2[5]= "Back Bay";
+            row2[6]= "Boston";
+            defaultTableModel.addRow(row2); 
+            Object[] row13 = new Object[7];
+            row13[0]= "Tarushi";
+            row13[1]= 12;
+            row13[2]= "Female";
+            row13[3]= "8573997820";
+            row13[4]= "881 huntington";
+            row13[5]= "Mission Hill";
+            row13[6]= "Boston";
+            defaultTableModel.addRow(row13); 
         for(Person person : personDirectoryArrayList.getPersonDirectoryArrayList()){
             Object[] row = new Object[7];
             row[0]= person;

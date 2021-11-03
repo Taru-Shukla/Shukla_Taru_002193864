@@ -96,30 +96,40 @@ public class MainFrameJFrame extends javax.swing.JFrame {
         jControlPane.setLayout(jControlPaneLayout);
         jControlPaneLayout.setHorizontalGroup(
             jControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jControlPaneLayout.createSequentialGroup()
-                .addGroup(jControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnViewPatientDirectory, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jBtnAddPatient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jControlPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jControlPaneLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jBtnCreatePerson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnViewPersonDirectory, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(12, 12, 12))
+                        .addComponent(jBtnCreatePerson)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jControlPaneLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jControlPaneLayout.createSequentialGroup()
+                                .addComponent(btnViewPersonDirectory, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6))
+                            .addComponent(btnViewPatientDirectory, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBtnAddPatient, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
+
+        jControlPaneLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnViewPatientDirectory, btnViewPersonDirectory, jBtnAddPatient, jBtnCreatePerson});
+
         jControlPaneLayout.setVerticalGroup(
             jControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jControlPaneLayout.createSequentialGroup()
-                .addGap(194, 194, 194)
+                .addGap(90, 90, 90)
                 .addComponent(jBtnCreatePerson)
                 .addGap(18, 18, 18)
                 .addComponent(btnViewPersonDirectory)
                 .addGap(18, 18, 18)
                 .addComponent(jBtnAddPatient)
-                .addGap(18, 18, 18)
+                .addGap(19, 19, 19)
                 .addComponent(btnViewPatientDirectory)
-                .addContainerGap(220, Short.MAX_VALUE))
+                .addContainerGap(398, Short.MAX_VALUE))
         );
+
+        jControlPaneLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnViewPersonDirectory, jBtnCreatePerson});
 
         jSplitPane.setLeftComponent(jControlPane);
 
@@ -132,7 +142,7 @@ public class MainFrameJFrame extends javax.swing.JFrame {
             jMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jMainPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 788, Short.MAX_VALUE)
+                .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jMainPanelLayout.setVerticalGroup(
@@ -185,7 +195,7 @@ public class MainFrameJFrame extends javax.swing.JFrame {
 
     private void jBtnAddPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAddPatientActionPerformed
         // TODO add your handling code here:
-        AddPatientJPanel addPatientJPanel= new AddPatientJPanel(vitalSignHistory);
+        AddPatientJPanel addPatientJPanel= new AddPatientJPanel(vitalSignHistory,personDirectory);
         jSplitPane.setRightComponent(addPatientJPanel);
 
     }//GEN-LAST:event_jBtnAddPatientActionPerformed

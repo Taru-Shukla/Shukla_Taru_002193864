@@ -28,11 +28,15 @@ public class PatientDirectory {
         this.patientDirectoryArrayList = patientDirectoryArrayList;
     }
      
-    public Patient addNewPatientDetails(Patient patient) {
+    public Patient addNewPatientDetails() {
         
         Patient newPatientDirectory = new Patient();
         patientDirectoryArrayList.add(newPatientDirectory);
         return newPatientDirectory;
        
     }
+    
+    public void deletePatientDetails(Patient p){
+patientDirectoryArrayList.remove(p);
+}
 }

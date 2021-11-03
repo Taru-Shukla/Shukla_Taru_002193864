@@ -20,7 +20,7 @@ public class ViewPatientDirectoryJPanel extends javax.swing.JPanel {
      * Creates new form ViewPatientDirectoryJPanel
      */
     int row, column;
-    DefaultTableModel defaultTableModel, defaultTableModel1;
+    DefaultTableModel defaultTableModel, defaultTableModel1,defaultTableModel2;
     VitalSignHistory vitalSignHistory;
     
     public ViewPatientDirectoryJPanel(VitalSignHistory vitalSignHistory) {
@@ -63,6 +63,9 @@ public class ViewPatientDirectoryJPanel extends javax.swing.JPanel {
         btnSearchResult = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTablePatientSearchResult = new javax.swing.JTable();
+        lblEncounterHistory = new javax.swing.JLabel();
+        txtEncounterHistory = new javax.swing.JTextField();
+        btnEncounterHistory = new javax.swing.JButton();
 
         jTablePatientDirectoryData.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -165,6 +168,22 @@ public class ViewPatientDirectoryJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(jTablePatientSearchResult);
 
+        lblEncounterHistory.setFont(new java.awt.Font("Lucida Grande", 2, 14)); // NOI18N
+        lblEncounterHistory.setText("Enter Patient ID for Encounter History");
+
+        txtEncounterHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEncounterHistoryActionPerformed(evt);
+            }
+        });
+
+        btnEncounterHistory.setText("View");
+        btnEncounterHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEncounterHistoryActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jSearchPanelLayout = new javax.swing.GroupLayout(jSearchPanel);
         jSearchPanel.setLayout(jSearchPanelLayout);
         jSearchPanelLayout.setHorizontalGroup(
@@ -172,39 +191,42 @@ public class ViewPatientDirectoryJPanel extends javax.swing.JPanel {
             .addGroup(jSearchPanelLayout.createSequentialGroup()
                 .addGroup(jSearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jSearchPanelLayout.createSequentialGroup()
+                        .addGap(496, 496, 496)
+                        .addComponent(jLabel1))
+                    .addGroup(jSearchPanelLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
                         .addGroup(jSearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jSearchPanelLayout.createSequentialGroup()
-                                .addGap(496, 496, 496)
-                                .addComponent(jLabel1))
-                            .addGroup(jSearchPanelLayout.createSequentialGroup()
+                                .addComponent(lblCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(60, 60, 60)
+                                .addComponent(comboBoxSelectedCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(59, 59, 59)
+                                .addComponent(lblPatientAge1)
                                 .addGap(60, 60, 60)
                                 .addGroup(jSearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jSearchPanelLayout.createSequentialGroup()
-                                        .addComponent(lblCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(60, 60, 60)
-                                        .addComponent(comboBoxSelectedCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(59, 59, 59)
-                                        .addComponent(lblPatientAge1)
-                                        .addGap(60, 60, 60)
-                                        .addGroup(jSearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jSearchPanelLayout.createSequentialGroup()
-                                                .addComponent(txtPatientMinAge, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel5))
-                                            .addComponent(lblMinAge))
+                                        .addComponent(txtPatientMinAge, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jSearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblMaxAge)
-                                            .addGroup(jSearchPanelLayout.createSequentialGroup()
-                                                .addComponent(txtPatientMaxAge, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(72, 72, 72)
-                                                .addComponent(btnSearchResult)))))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jSearchPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1213, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                                        .addComponent(jLabel5))
+                                    .addComponent(lblMinAge))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jSearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblMaxAge)
+                                    .addGroup(jSearchPanelLayout.createSequentialGroup()
+                                        .addComponent(txtPatientMaxAge, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(72, 72, 72)
+                                        .addComponent(btnSearchResult))))
+                            .addGroup(jSearchPanelLayout.createSequentialGroup()
+                                .addComponent(lblEncounterHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)
+                                .addComponent(txtEncounterHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnEncounterHistory)))))
+                .addGap(230, 230, 230))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jSearchPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1213, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jSearchPanelLayout.setVerticalGroup(
             jSearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,9 +248,14 @@ public class ViewPatientDirectoryJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel5)
                     .addComponent(txtPatientMaxAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearchResult))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jSearchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEncounterHistory)
+                    .addComponent(txtEncounterHistory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEncounterHistory))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -260,10 +287,13 @@ public class ViewPatientDirectoryJPanel extends javax.swing.JPanel {
                                 .addComponent(txtPatientContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(60, 60, 60)
                                 .addComponent(btnUpdatePatientDetails)))
-                        .addGap(0, 6, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jSearchPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtPatientAge, txtPatientName});
+
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -291,7 +321,7 @@ public class ViewPatientDirectoryJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,8 +381,9 @@ public class ViewPatientDirectoryJPanel extends javax.swing.JPanel {
         defaultTableModel1 = (DefaultTableModel)jTablePatientSearchResult.getModel();
         defaultTableModel1.setRowCount(0);
         String selectedCommunity = comboBoxSelectedCommunity.getSelectedItem().toString();
-        int minimum;
-        int maximum;
+        int minimum; 
+        int maximum;  
+        int count=0;
         if (txtPatientMinAge.getText()== null || txtPatientMinAge.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Enter Minimum Range");
             return;
@@ -373,37 +404,77 @@ public class ViewPatientDirectoryJPanel extends javax.swing.JPanel {
                 if(matchingAge >= minimum  && matchingAge <= maximum){
                     double matchingSystolic = vitalSignHistory.getVitalSignArrayList().get(i).getBloodPressureSystolic();
                     double matchingDiastolic = vitalSignHistory.getVitalSignArrayList().get(i).getBloodPressureDiastolic();
-                    if(matchingSystolic>120 || matchingSystolic < 90 || matchingDiastolic>80){
-
-                        Object[] object= {vitalSignHistory.getVitalSignArrayList().get(i).getPatientName(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getPatientAge(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getPatientGender(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getContactNumber(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getResidence(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getCommunity(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getCity(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getPatientId(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getBodyTemperature(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getBloodPressureSystolic(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getBloodPressureDiastolic(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getHeartRate(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getWeight(),
-                            vitalSignHistory.getVitalSignArrayList().get(i).getDate()
-
-                        };
-                        defaultTableModel1.addRow(object);
-                    }
+                     if(matchingSystolic>120 || matchingSystolic < 90 || matchingDiastolic>80){
+                         
+                         
+                    Object[] object= {vitalSignHistory.getVitalSignArrayList().get(i).getPatientName(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getPatientAge(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getPatientGender(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getContactNumber(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getResidence(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getCommunity(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getCity(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getPatientId(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getBodyTemperature(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getBloodPressureSystolic(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getBloodPressureDiastolic(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getHeartRate(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getWeight(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getDate()
+                
+                    };
+                count++;    
+                defaultTableModel1.addRow(object);
+                    }  
                 }
-            }
+            } 
         }
+        JOptionPane.showMessageDialog(btnSearchResult, "Total Number of Abnormal Patients are " +count);
     }//GEN-LAST:event_btnSearchResultActionPerformed
 
     private void jTablePatientSearchResultMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTablePatientSearchResultMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jTablePatientSearchResultMouseClicked
 
+    private void txtEncounterHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEncounterHistoryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEncounterHistoryActionPerformed
+
+    private void btnEncounterHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEncounterHistoryActionPerformed
+        // TODO add your handling code here:
+        defaultTableModel2 = (DefaultTableModel)jTablePatientSearchResult.getModel();
+        defaultTableModel2.setRowCount(0);
+        String encounterHistoryPatientId = txtEncounterHistory.getText();
+        for (int i = 0; i < vitalSignHistory.getVitalSignArrayList().size(); i++) {
+            String selectedId =String.valueOf(vitalSignHistory.getVitalSignArrayList().get(i).getPatientId());
+            
+            if (encounterHistoryPatientId.equalsIgnoreCase(selectedId)) {
+                
+               Object[] object= {vitalSignHistory.getVitalSignArrayList().get(i).getPatientName(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getPatientAge(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getPatientGender(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getContactNumber(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getResidence(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getCommunity(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getCity(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getPatientId(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getBodyTemperature(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getBloodPressureSystolic(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getBloodPressureDiastolic(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getHeartRate(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getWeight(),
+                    vitalSignHistory.getVitalSignArrayList().get(i).getDate()
+                
+                    };
+                defaultTableModel2.addRow(object);
+            }
+            
+        }
+    }//GEN-LAST:event_btnEncounterHistoryActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEncounterHistory;
     private javax.swing.JButton btnSearchResult;
     private javax.swing.JButton btnUpdatePatientDetails;
     private javax.swing.JComboBox<String> comboBoxSelectedCommunity;
@@ -419,11 +490,13 @@ public class ViewPatientDirectoryJPanel extends javax.swing.JPanel {
     private javax.swing.JTable jTablePatientSearchResult;
     private javax.swing.JLabel lblCommunity;
     private javax.swing.JLabel lblContactNumber;
+    private javax.swing.JLabel lblEncounterHistory;
     private javax.swing.JLabel lblMaxAge;
     private javax.swing.JLabel lblMinAge;
     private javax.swing.JLabel lblPatientAge;
     private javax.swing.JLabel lblPatientAge1;
     private javax.swing.JLabel lblPatientName;
+    private javax.swing.JTextField txtEncounterHistory;
     private javax.swing.JTextField txtPatientAge;
     private javax.swing.JTextField txtPatientContactNumber;
     private javax.swing.JTextField txtPatientMaxAge;
@@ -435,7 +508,23 @@ public class ViewPatientDirectoryJPanel extends javax.swing.JPanel {
     
     defaultTableModel = (DefaultTableModel)jTablePatientDirectoryData.getModel();
         defaultTableModel.setRowCount(0);
-        
+        Object[] row13 = new Object[14];
+            row13[0]= "Tarushi";
+            row13[1]= 12;
+            row13[2]= "Female";
+            row13[3]= "8573997820";
+            row13[4]= "881 huntington";
+            row13[5]= "Mission Hill";
+            row13[6]= "Boston";
+            row13[7]= "420";
+            row13[8]= "98.0";
+            row13[9]= "119.0";
+            row13[10]= "89.0";
+            row13[11]= "77.0";
+            row13[12]= "80.0";
+            row13[13]= "11/11/2021";
+              defaultTableModel.addRow(row13); 
+            
         for(VitalSigns vc : vitalSignHistory.getVitalSignArrayList()){
             Object[] row = new Object[14];
             row[0]= vc;
