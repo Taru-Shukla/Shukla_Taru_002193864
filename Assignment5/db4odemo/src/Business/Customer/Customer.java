@@ -5,7 +5,9 @@
  */
 package Business.Customer;
 
-
+import Business.Restaurant.Order;
+import java.util.ArrayList;
+import Business.Restaurant.Order;
 /**
  *
  * @author harold
@@ -18,7 +20,8 @@ public class Customer {
     private String password;
     private String address;
     private String phoneNumber;
-
+    private ArrayList<Order> orders;
+    private Order order;
 
     public String getPassword() {
         return password;
@@ -32,7 +35,7 @@ public class Customer {
         this.username = username;
         this.name = name;
         this.password = password;
-   
+        orders = new ArrayList<>();
     }
 
     public String getName() {
@@ -67,5 +70,13 @@ public class Customer {
         this.phoneNumber = phoneNumber;
     }
 
+    public ArrayList<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Order order) {
+        this.order = order;
+        orders.add(order);
+    }
     
 }

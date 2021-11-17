@@ -32,6 +32,13 @@ public class UserAccountDirectory {
         return null;
     }
     
+    public UserAccount findUserByUsername(String username){
+        for (UserAccount ua : userAccountList)
+            if (ua.getUsername().equals(username)){
+                return ua;
+            }
+        return null;
+    }
     public UserAccount createUserAccount(String username, String password, Employee employee, Role role){
         UserAccount userAccount = new UserAccount();
         userAccount.setUsername(username);
@@ -48,5 +55,16 @@ public class UserAccountDirectory {
                 return false;
         }
         return true;
+    }
+    
+    public String deleteUserAccountByName(String username){
+        for (UserAccount ua : userAccountList){
+            if (ua.getUsername().equals(username)){
+                userAccountList.remove(ua);
+                return "Account deleted successfully";
+            }
+                
+        }
+        return "User not found";
     }
 }
