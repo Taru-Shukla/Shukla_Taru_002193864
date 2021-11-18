@@ -51,7 +51,10 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         resultJTextField = new javax.swing.JTextField();
 
-        submitJButton.setBackground(new java.awt.Color(0, 102, 102));
+        setBackground(new java.awt.Color(0, 0, 0));
+
+        submitJButton.setBackground(new java.awt.Color(153, 153, 153));
+        submitJButton.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         submitJButton.setForeground(new java.awt.Color(255, 255, 255));
         submitJButton.setText("Submit Result");
         submitJButton.setBorderPainted(false);
@@ -61,6 +64,8 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Submit Status");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -74,7 +79,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(submitJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(resultJTextField))
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,10 +93,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
                 .addContainerGap(195, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-    public void populateData() {
-        DeliveryMan d = e.getDeliveryManDirectory().findDeliveryManByName(uA.getUsername());
-        resultJTextField.setText(d.getPendingOrders().getOrderStatus());
-    }
+
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
 
         DeliveryMan d = e.getDeliveryManDirectory().findDeliveryManByName(uA.getUsername());
@@ -106,11 +108,14 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         Component component = componentArray[componentArray.length - 1];
         DeliveryManWorkAreaJPanel dwjp = (DeliveryManWorkAreaJPanel) component;
         dwjp.populateTable();
-        
+
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_submitJButtonActionPerformed
-
+    public void populateData() {
+        DeliveryMan d = e.getDeliveryManDirectory().findDeliveryManByName(uA.getUsername());
+        resultJTextField.setText(d.getPendingOrders().getOrderStatus());
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField resultJTextField;
