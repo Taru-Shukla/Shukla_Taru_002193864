@@ -76,4 +76,8 @@ public class DeliveryMan {
         this.password = password;
     }
 
+    public ArrayList<Order> onOrderComplete() {
+        
+        return completedOrders;
+    }
 }
