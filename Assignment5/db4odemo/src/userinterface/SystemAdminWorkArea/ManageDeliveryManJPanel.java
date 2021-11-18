@@ -4,12 +4,12 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.Customer.Customer;
-import Business.Customer.CustomerDirectory;
+import Business.DeliveryMan.DeliveryMan;
+import Business.DeliveryMan.DeliveryManDirectory;
 import Business.EcoSystem;
-import Business.Role.CustomerRole;
+import Business.Employee.Employee;
+import Business.Role.DeliverManRole;
 import Business.UserAccount.UserAccount;
-import Business.UserAccount.UserAccountDirectory;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -19,22 +19,20 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author tarushukla
  */
-public class ManageCustomerJPanel extends javax.swing.JPanel {
+public class ManageDeliveryManJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form ManageCustomerJPanel
-     */
     private JPanel userProcessContainer;
     private EcoSystem ecosystem;
     private UserAccount user;
-    private UserAccountDirectory userAccDir;
 
-    public ManageCustomerJPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
+    /**
+     * Creates new form ManageDeliveryManJPanel
+     */
+    public ManageDeliveryManJPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
-
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
-        viewCustomerTable();
+        viewDeliveryManTable();
     }
 
     /**
@@ -46,8 +44,8 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -56,37 +54,23 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
         jTextField3 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton6 = new javax.swing.JButton();
 
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
+
         setPreferredSize(new java.awt.Dimension(700, 500));
-
-        jButton1.setBackground(new java.awt.Color(0, 102, 102));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Back");
-        jButton1.setBorderPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Create New Customer");
 
         jLabel2.setText("Name");
 
         jLabel3.setText("Password");
 
         jLabel4.setText("Username");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -100,7 +84,20 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
         });
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("View Customers");
+        jLabel5.setText("View Deliveryman");
+
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Back");
+        jButton1.setBorderPainted(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Create New Deliveryman");
 
         jButton5.setBackground(new java.awt.Color(0, 102, 102));
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
@@ -137,7 +134,6 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(183, 183, 183)
@@ -154,18 +150,20 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
                                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButton1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addContainerGap()
+                        .addComponent(jButton1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(38, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(75, 75, 75))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,15 +184,15 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton5)
                     .addComponent(jButton6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -221,36 +219,33 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Password Missing");
             return;
         }
-        if (ecosystem.getUserAccountDirectory().checkIfUsernameIsUnique(jTextField2.getText()) == true) {
-            UserAccount createUserAccount = ecosystem.getUserAccountDirectory().createUserAccount(jTextField2.getText(), jTextField3.getText(), null, new CustomerRole());
-            Customer customer = ecosystem.getCustomerDirectory().setCustomer(new Customer(jTextField1.getText(), jTextField2.getText(), jTextField3.getText()));
 
+        if (ecosystem.getUserAccountDirectory().checkIfUsernameIsUnique(jTextField2.getText()) == true) {
+            UserAccount createUserAccount = ecosystem.getUserAccountDirectory().createUserAccount(jTextField2.getText(), jTextField3.getText(), null, new DeliverManRole());
+            DeliveryMan deliveryMan = ecosystem.getDeliveryManDirectory().setD(new DeliveryMan(jTextField1.getText(), jTextField2.getText(), jTextField3.getText()));
+            deliveryMan.setAvailable(true);
+            Employee employee = ecosystem.getEmployeeDirectory().createEmployee(jTextField1.getText());
             jTextField1.setText("");
             jTextField2.setText("");
             jTextField3.setText("");
-            viewCustomerTable();
-            JOptionPane.showMessageDialog(null, "Added new user");
+            viewDeliveryManTable();
+            JOptionPane.showMessageDialog(null, "Add a new deliveryman");
         } else {
             JOptionPane.showMessageDialog(null, jTextField2.getText() + "exists. Enter a new user name");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         int selectedRow = jTable1.getSelectedRow();
-
         if (selectedRow >= 0) {
             int selectionButton = JOptionPane.YES_NO_OPTION;
             int selectionResult = JOptionPane.showConfirmDialog(null, "Confirm delete?", "Warning", selectionButton);
             if (selectionResult == JOptionPane.YES_OPTION) {
                 String usernameValue = (String) jTable1.getValueAt(selectedRow, 1);
+                ecosystem.getDeliveryManDirectory().deleteDeliveryManByName(usernameValue);
                 String output = ecosystem.getUserAccountDirectory().deleteUserAccountByName(usernameValue);
-                ecosystem.getCustomerDirectory().removeCustomerByName(usernameValue);
-                viewCustomerTable();
+                viewDeliveryManTable();
                 JOptionPane.showMessageDialog(null, output);
             }
         } else {
@@ -262,41 +257,44 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = jTable1.getSelectedRow();
         String usernameValue = (String) jTable1.getValueAt(selectedRow, 1);
-        Customer c = ecosystem.getCustomerDirectory().getCustomerByUserName(usernameValue);
-        UserAccount uA = ecosystem.getUserAccountDirectory().findUserByUsername(usernameValue);
-        uA.setPassword((String) jTable1.getValueAt(selectedRow, 2));
-        c.setPassword((String) jTable1.getValueAt(selectedRow, 2));
-        System.out.println((String) jTable1.getValueAt(selectedRow, 0));
-        c.setName((String) jTable1.getValueAt(selectedRow, 0));
-        viewCustomerTable();
+        DeliveryMan d = ecosystem.getDeliveryManDirectory().findDeliveryManByName(usernameValue);
+        d.setPassword((String) jTable1.getValueAt(selectedRow, 2));
+        d.setDeliveryManName((String) jTable1.getValueAt(selectedRow, 1));
+        ecosystem.getUserAccountDirectory().findUserByUsername(usernameValue).setPassword((String) jTable1.getValueAt(selectedRow, 2));
+        viewDeliveryManTable();
         JOptionPane.showMessageDialog(null, "Updated details");
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    public void viewCustomerTable() {
+    public void viewDeliveryManTable() {
 
         DefaultTableModel table = (DefaultTableModel) jTable1.getModel();
+
         table.setRowCount(0);
-        for (Customer customer : ecosystem.getCustomerDirectory().getCustomerList()) {
-            Object[] row = new Object[3];
-            row[0] = customer.getName();
-            row[1] = customer.getUsername();
-            row[2] = customer.getPassword();
+        if (ecosystem.getDeliveryManDirectory().getDeliveryManDir().size() > 0) {
+            for (DeliveryMan d : ecosystem.getDeliveryManDirectory().getDeliveryManDir()) {
+                Object[] row = new Object[3];
+                row[0] = d.getDeliveryManName();
+                row[1] = d.getUsername();
+                row[2] = d.getPassword();
+                table.addRow(row);
 
-            table.addRow(row);
-
+            }
         }
     }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
