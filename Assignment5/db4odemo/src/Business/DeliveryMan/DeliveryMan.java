@@ -5,7 +5,9 @@
  */
 package Business.DeliveryMan;
 
-
+import Business.Restaurant.Order;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -17,7 +19,9 @@ public class DeliveryMan {
     private String deliveryManName;
     private String username;
     private String password;
+    private Order pendingOrders;
     private Boolean available;
+    private ArrayList<Order> completedOrders;
 
     public Boolean getAvailable() {
         return available;
@@ -25,6 +29,15 @@ public class DeliveryMan {
 
     public void setAvailable(Boolean available) {
         this.available = available;
+    }
+
+    public Order getPendingOrders() {
+        return pendingOrders;
+    }
+
+    public void setPendingOrders(Order pendingOrders) {
+        this.pendingOrders = pendingOrders;
+        completedOrders.add(pendingOrders);
     }
 
     public String getDeliveryManName() {
@@ -44,6 +57,7 @@ public class DeliveryMan {
         this.deliveryManName = deliveryManName;
         this.username = username;
         this.password = password;
+        completedOrders = new ArrayList<>();
     }
 
     public String getUsername() {
