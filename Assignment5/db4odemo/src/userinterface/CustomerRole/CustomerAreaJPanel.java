@@ -249,6 +249,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         jTextField1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Password");
 
         jTextField2.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
